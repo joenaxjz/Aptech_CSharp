@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuestionMark", "QuestionMark\QuestionMark.csproj", "{D2FDEE70-1A8B-4C32-9455-BBA4771867D7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwitchForWhile", "SwitchForWhile\SwitchForWhile.csproj", "{6E8A5E82-0D47-4515-9483-22C846C50A25}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{D2FDEE70-1A8B-4C32-9455-BBA4771867D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2FDEE70-1A8B-4C32-9455-BBA4771867D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2FDEE70-1A8B-4C32-9455-BBA4771867D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E8A5E82-0D47-4515-9483-22C846C50A25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E8A5E82-0D47-4515-9483-22C846C50A25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E8A5E82-0D47-4515-9483-22C846C50A25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E8A5E82-0D47-4515-9483-22C846C50A25}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

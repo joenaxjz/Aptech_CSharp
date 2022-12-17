@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuestionMark", "QuestionMark\QuestionMark.csproj", "{D2FDEE70-1A8B-4C32-9455-BBA4771867D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuestionMark", "QuestionMark\QuestionMark.csproj", "{D2FDEE70-1A8B-4C32-9455-BBA4771867D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwitchForWhile", "SwitchForWhile\SwitchForWhile.csproj", "{6E8A5E82-0D47-4515-9483-22C846C50A25}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwitchForWhile", "SwitchForWhile\SwitchForWhile.csproj", "{6E8A5E82-0D47-4515-9483-22C846C50A25}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ref_Out_Regex_TryParse", "Ref_Out_Regex_TryParse\Ref_Out_Regex_TryParse.csproj", "{EA1BD099-5E6B-458C-9E7E-6318AE1198BB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{6E8A5E82-0D47-4515-9483-22C846C50A25}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E8A5E82-0D47-4515-9483-22C846C50A25}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E8A5E82-0D47-4515-9483-22C846C50A25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA1BD099-5E6B-458C-9E7E-6318AE1198BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA1BD099-5E6B-458C-9E7E-6318AE1198BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA1BD099-5E6B-458C-9E7E-6318AE1198BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA1BD099-5E6B-458C-9E7E-6318AE1198BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,15 @@
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\Ref_Out_Regex_TryParse\bin\Debug\net7.0\Ref_Out_Regex_TryParse.exe
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\Ref_Out_Regex_TryParse\bin\Debug\net7.0\Ref_Out_Regex_TryParse.deps.json
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\Ref_Out_Regex_TryParse\bin\Debug\net7.0\Ref_Out_Regex_TryParse.runtimeconfig.json
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\Ref_Out_Regex_TryParse\bin\Debug\net7.0\Ref_Out_Regex_TryParse.dll
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\Ref_Out_Regex_TryParse\bin\Debug\net7.0\Ref_Out_Regex_TryParse.pdb
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\Ref_Out_Regex_TryParse\obj\Debug\net7.0\Ref_Out_Regex_TryParse.csproj.AssemblyReference.cache
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\Ref_Out_Regex_TryParse\obj\Debug\net7.0\Ref_Out_Regex_TryParse.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\Ref_Out_Regex_TryParse\obj\Debug\net7.0\Ref_Out_Regex_TryParse.AssemblyInfoInputs.cache
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\Ref_Out_Regex_TryParse\obj\Debug\net7.0\Ref_Out_Regex_TryParse.AssemblyInfo.cs
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\Ref_Out_Regex_TryParse\obj\Debug\net7.0\Ref_Out_Regex_TryParse.csproj.CoreCompileInputs.cache
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\Ref_Out_Regex_TryParse\obj\Debug\net7.0\Ref_Out_Regex_TryParse.dll
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\Ref_Out_Regex_TryParse\obj\Debug\net7.0\refint\Ref_Out_Regex_TryParse.dll
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\Ref_Out_Regex_TryParse\obj\Debug\net7.0\Ref_Out_Regex_TryParse.pdb
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\Ref_Out_Regex_TryParse\obj\Debug\net7.0\Ref_Out_Regex_TryParse.genruntimeconfig.cache
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\Ref_Out_Regex_TryParse\obj\Debug\net7.0\ref\Ref_Out_Regex_TryParse.dll

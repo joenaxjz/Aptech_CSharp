@@ -1,0 +1,15 @@
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\PatrialClass\bin\Debug\net7.0\PatrialClass.exe
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\PatrialClass\bin\Debug\net7.0\PatrialClass.deps.json
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\PatrialClass\bin\Debug\net7.0\PatrialClass.runtimeconfig.json
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\PatrialClass\bin\Debug\net7.0\PatrialClass.dll
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\PatrialClass\bin\Debug\net7.0\PatrialClass.pdb
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\PatrialClass\obj\Debug\net7.0\PatrialClass.csproj.AssemblyReference.cache
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\PatrialClass\obj\Debug\net7.0\PatrialClass.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\PatrialClass\obj\Debug\net7.0\PatrialClass.AssemblyInfoInputs.cache
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\PatrialClass\obj\Debug\net7.0\PatrialClass.AssemblyInfo.cs
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\PatrialClass\obj\Debug\net7.0\PatrialClass.csproj.CoreCompileInputs.cache
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\PatrialClass\obj\Debug\net7.0\PatrialClass.dll
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\PatrialClass\obj\Debug\net7.0\refint\PatrialClass.dll
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\PatrialClass\obj\Debug\net7.0\PatrialClass.pdb
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\PatrialClass\obj\Debug\net7.0\PatrialClass.genruntimeconfig.cache
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\PatrialClass\obj\Debug\net7.0\ref\PatrialClass.dll

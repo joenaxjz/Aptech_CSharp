@@ -1,0 +1,15 @@
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\OopPolymorphismOverriding\bin\Debug\net7.0\OopPolymorphismOverriding.exe
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\OopPolymorphismOverriding\bin\Debug\net7.0\OopPolymorphismOverriding.deps.json
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\OopPolymorphismOverriding\bin\Debug\net7.0\OopPolymorphismOverriding.runtimeconfig.json
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\OopPolymorphismOverriding\bin\Debug\net7.0\OopPolymorphismOverriding.dll
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\OopPolymorphismOverriding\bin\Debug\net7.0\OopPolymorphismOverriding.pdb
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\OopPolymorphismOverriding\obj\Debug\net7.0\OopPolymorphismOverriding.csproj.AssemblyReference.cache
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\OopPolymorphismOverriding\obj\Debug\net7.0\OopPolymorphismOverriding.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\OopPolymorphismOverriding\obj\Debug\net7.0\OopPolymorphismOverriding.AssemblyInfoInputs.cache
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\OopPolymorphismOverriding\obj\Debug\net7.0\OopPolymorphismOverriding.AssemblyInfo.cs
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\OopPolymorphismOverriding\obj\Debug\net7.0\OopPolymorphismOverriding.csproj.CoreCompileInputs.cache
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\OopPolymorphismOverriding\obj\Debug\net7.0\OopPolymorphismOverriding.dll
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\OopPolymorphismOverriding\obj\Debug\net7.0\refint\OopPolymorphismOverriding.dll
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\OopPolymorphismOverriding\obj\Debug\net7.0\OopPolymorphismOverriding.pdb
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\OopPolymorphismOverriding\obj\Debug\net7.0\OopPolymorphismOverriding.genruntimeconfig.cache
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\OopPolymorphismOverriding\obj\Debug\net7.0\ref\OopPolymorphismOverriding.dll

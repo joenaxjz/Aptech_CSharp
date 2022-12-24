@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\AptechCSharpNet7",
+    "\\AptechCSharpNet7\\PatrialClass",
+    "\\AptechCSharpNet7\\SwitchForWhile"
   ],
-  "SelectedNode": "\\AptechCSharpNet7.sln",
+  "SelectedNode": "\\AptechCSharpNet7\\PatrialClass\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

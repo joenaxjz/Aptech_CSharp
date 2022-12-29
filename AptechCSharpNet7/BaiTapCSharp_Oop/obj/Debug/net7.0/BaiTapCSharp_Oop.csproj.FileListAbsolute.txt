@@ -1,0 +1,15 @@
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\BaiTapCSharp_Oop\bin\Debug\net7.0\BaiTapCSharp_Oop.exe
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\BaiTapCSharp_Oop\bin\Debug\net7.0\BaiTapCSharp_Oop.deps.json
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\BaiTapCSharp_Oop\bin\Debug\net7.0\BaiTapCSharp_Oop.runtimeconfig.json
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\BaiTapCSharp_Oop\bin\Debug\net7.0\BaiTapCSharp_Oop.dll
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\BaiTapCSharp_Oop\bin\Debug\net7.0\BaiTapCSharp_Oop.pdb
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\BaiTapCSharp_Oop\obj\Debug\net7.0\BaiTapCSharp_Oop.csproj.AssemblyReference.cache
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\BaiTapCSharp_Oop\obj\Debug\net7.0\BaiTapCSharp_Oop.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\BaiTapCSharp_Oop\obj\Debug\net7.0\BaiTapCSharp_Oop.AssemblyInfoInputs.cache
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\BaiTapCSharp_Oop\obj\Debug\net7.0\BaiTapCSharp_Oop.AssemblyInfo.cs
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\BaiTapCSharp_Oop\obj\Debug\net7.0\BaiTapCSharp_Oop.csproj.CoreCompileInputs.cache
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\BaiTapCSharp_Oop\obj\Debug\net7.0\BaiTapCSharp_Oop.dll
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\BaiTapCSharp_Oop\obj\Debug\net7.0\refint\BaiTapCSharp_Oop.dll
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\BaiTapCSharp_Oop\obj\Debug\net7.0\BaiTapCSharp_Oop.pdb
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\BaiTapCSharp_Oop\obj\Debug\net7.0\BaiTapCSharp_Oop.genruntimeconfig.cache
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\BaiTapCSharp_Oop\obj\Debug\net7.0\ref\BaiTapCSharp_Oop.dll

@@ -67,4 +67,62 @@ List<Student> students = new List<Student>()
 //}
 
 // kết hợp với foreach của list
-students.Where(stu => stu.Id > 2).ToList().ForEach(Console.WriteLine);
+//students.Where(stu => stu.Id > 2).ToList().ForEach(Console.WriteLine);
+
+//var t = from stu in students
+//        select stu;
+
+//IEnumerable<Student> i = from stu in students
+//                         select stu;
+
+// với linq to object, khi sd query syntax hay method syntax thì trả về ko phải là list hay array, mà trả về IEnumerable ( con của IEnumerator ) dùng để duyệt qua list
+
+//students.ForEach(Console.WriteLine);
+//t.ToList().ForEach(Console.WriteLine);
+//
+
+//students.ForEach(
+//    stu =>
+//    {
+//        if (stu.Id > 2)
+//        {
+//            Console.WriteLine(stu);
+//        }
+//    }
+//);
+
+// linq
+//============= METHOD SYNTAX ===========================
+//students.Where(stu => stu.Id > 2).ToList().ForEach(Console.WriteLine);
+
+//============= QUERY SYNTAX ==============================
+//var t = from stu in students
+//        where stu.Id > 1
+//        select stu;
+//t.ToList().ForEach(Console.WriteLine);
+
+// lấy thuộc tính từ sinh viên như câu select, lấy các cột, được phép thay đổi cột
+
+// QUERY SYNTAX
+var t = from stu in students
+        where stu.Id > 1
+        select new
+        {
+            Info = $"{stu.Id} : {stu.Name}",
+            Birthday = stu.Dob
+        };
+t.ToList().ForEach(i => Console.WriteLine(i.Birthday));
+
+// METHOD SYNTAX
+students.Where(stu => stu.Id > 1).Select(stu => new
+{
+    Info = $"{stu.Id} : {stu.Name}", stu.Gender,
+    stu.Dob
+}).ToList().ForEach(Console.WriteLine);
+
+// sắp xếp trật tự
+students.Where(stu => stu.Id > 1)
+        .OrderByDescending(stu => stu.Id)
+        .ThenBy(stu => stu.Name)
+        .ToList()
+        .ForEach(Console.WriteLine);       

@@ -21,13 +21,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OopEncapsulationProperty", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OopPolymorphismOverloading", "OopPolymorphism\OopPolymorphismOverloading.csproj", "{C855CA5B-CE85-4057-9236-AF8AFE70DC39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OopPolymorphismOverriding", "OopPolymorphismOverriding\OopPolymorphismOverriding.csproj", "{19B6DC42-9A8B-4018-A03B-94897737F9A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OopPolymorphismOverriding", "OopPolymorphismOverriding\OopPolymorphismOverriding.csproj", "{19B6DC42-9A8B-4018-A03B-94897737F9A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OopPolymorphismInterface", "OopPolymorphismInterface\OopPolymorphismInterface.csproj", "{1C152BF6-868F-481E-B3AF-65C65E72B542}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OopPolymorphismInterface", "OopPolymorphismInterface\OopPolymorphismInterface.csproj", "{1C152BF6-868F-481E-B3AF-65C65E72B542}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtentionMethod", "ExtentionMethod\ExtentionMethod.csproj", "{F6DFEC69-24F7-442A-915D-B6AADD6198F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExtentionMethod", "ExtentionMethod\ExtentionMethod.csproj", "{F6DFEC69-24F7-442A-915D-B6AADD6198F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListAndLinq", "ListAndLinq\ListAndLinq.csproj", "{B90BE202-2668-4381-84EE-E87082057ECD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ListAndLinq", "ListAndLinq\ListAndLinq.csproj", "{B90BE202-2668-4381-84EE-E87082057ECD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericClass", "GenericClass\GenericClass.csproj", "{1418071B-3888-4156-A672-A3417F7755A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaiTapCSharp_Oop", "BaiTapCSharp_Oop\BaiTapCSharp_Oop.csproj", "{E18C2329-C5D6-4510-9758-591D2BC8CAF2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +91,14 @@ Global
 		{B90BE202-2668-4381-84EE-E87082057ECD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B90BE202-2668-4381-84EE-E87082057ECD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B90BE202-2668-4381-84EE-E87082057ECD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1418071B-3888-4156-A672-A3417F7755A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1418071B-3888-4156-A672-A3417F7755A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1418071B-3888-4156-A672-A3417F7755A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1418071B-3888-4156-A672-A3417F7755A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E18C2329-C5D6-4510-9758-591D2BC8CAF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E18C2329-C5D6-4510-9758-591D2BC8CAF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E18C2329-C5D6-4510-9758-591D2BC8CAF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E18C2329-C5D6-4510-9758-591D2BC8CAF2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

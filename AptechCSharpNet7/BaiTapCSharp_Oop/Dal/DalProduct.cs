@@ -19,7 +19,7 @@ internal class DalProduct : IProduct
             Product pro = new();
             pro.ProId = Validate<string>.Input("Pls enter id: ");
             pro.ProName = Validate<string>.Input("Pls enter the name: ");
-            pro.ProPrice = Validate<Double>.Input("Pls enter the price: ");
+            pro.ProPrice = Validate<double>.Input("Pls enter the price: ");
             pro.Quantity = Validate<int>.Input("pls enter the quantity: ");
             pro.Mfg = Validate<DateTime>.Input("Enter the Mfg: ");
             list.Add(pro);
@@ -29,5 +29,16 @@ internal class DalProduct : IProduct
     public void Show()
     {
         list.ForEach(Console.WriteLine);
+    }
+
+    public void Search()
+    {
+        var searchname = Validate<string>.Input("Enter the name of product you wanna search");
+        list.Where(pro => pro.ProName == searchname).ToList().ForEach(Console.WriteLine);
+    }
+
+    public void Update()
+    {
+
     }
 }

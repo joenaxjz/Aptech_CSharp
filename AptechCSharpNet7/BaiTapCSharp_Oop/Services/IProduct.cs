@@ -9,4 +9,5 @@ internal interface IProduct
 {
     void Add();
     void Show();
+    void Search();
 }

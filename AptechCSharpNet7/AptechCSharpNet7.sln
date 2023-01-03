@@ -31,7 +31,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ListAndLinq", "ListAndLinq\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericClass", "GenericClass\GenericClass.csproj", "{1418071B-3888-4156-A672-A3417F7755A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaiTapCSharp_Oop", "BaiTapCSharp_Oop\BaiTapCSharp_Oop.csproj", "{E18C2329-C5D6-4510-9758-591D2BC8CAF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaiTapCSharp_Oop", "BaiTapCSharp_Oop\BaiTapCSharp_Oop.csproj", "{E18C2329-C5D6-4510-9758-591D2BC8CAF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App11", "App11\App11.csproj", "{A0938717-ABB5-48D8-9CB7-946D07A74713}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,6 +101,10 @@ Global
 		{E18C2329-C5D6-4510-9758-591D2BC8CAF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E18C2329-C5D6-4510-9758-591D2BC8CAF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E18C2329-C5D6-4510-9758-591D2BC8CAF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0938717-ABB5-48D8-9CB7-946D07A74713}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0938717-ABB5-48D8-9CB7-946D07A74713}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0938717-ABB5-48D8-9CB7-946D07A74713}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0938717-ABB5-48D8-9CB7-946D07A74713}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

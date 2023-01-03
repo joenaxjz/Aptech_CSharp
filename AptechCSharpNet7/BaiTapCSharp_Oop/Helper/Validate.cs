@@ -34,7 +34,7 @@ internal class Validate<T>
                             throw new Exception("Value nust be greater than 0");
                         }break;
                     case TypeCode.Double: obj = Convert.ToDouble(str);
-                        if ((int)obj < 0)
+                        if ((double)obj < 0)
                         {
                             throw new Exception("Value nust be greater than 0");
                         }break;

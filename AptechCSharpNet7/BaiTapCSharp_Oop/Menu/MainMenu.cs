@@ -18,7 +18,7 @@ internal class MainMenu
             dalProduct.ChangeColor(ConsoleColor.Gray, ConsoleColor.Red);
             Console.WriteLine("1: Add Product");
             Console.WriteLine("2: Show List Product");
-            Console.WriteLine("3: Exit");
+            Console.WriteLine("3: Search Info Product");
             var n = Validate<int>.Input("Your Choise Is: ");
             switch(n)
             {
@@ -28,6 +28,9 @@ internal class MainMenu
                 case 2:
                     dalProduct.ChangeColor(ConsoleColor.Blue, ConsoleColor.Yellow);
                     dalProduct.Show(); break;
+                case 3:
+                    dalProduct.ChangeColor(ConsoleColor.Blue, ConsoleColor.Yellow);
+                    dalProduct.Search(); break;
                 default:
                     Console.WriteLine("Exiting the program");
                     return;

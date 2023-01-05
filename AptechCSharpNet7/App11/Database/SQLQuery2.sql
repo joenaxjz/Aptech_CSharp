@@ -36,3 +36,19 @@ begin
 	where Id = @Id
 end
 go
+
+create proc delStu
+@Id int
+as
+begin
+	delete  from Student where Id = @Id
+end
+go
+
+create proc addStu
+@FirstName nvarchar(50), @LastName nvarchar(50), @Gender bit, @DoB date
+as
+begin
+	insert into student (FirstName, LastName, Gender, DoB) values ( @FirstName, @LastName, @Gender, @DoB)
+end
+go

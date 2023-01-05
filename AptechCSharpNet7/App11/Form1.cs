@@ -107,5 +107,75 @@ namespace App11
             DoB.DataBindings.Clear();
             LoadData();
         }
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+            cmd.CommandText = "delStu";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@Id", txtId.Text);
+            con.Open();
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Deleted", "info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                con.Close();
+                cmd.Parameters.Clear();
+            }
+            txtId.DataBindings.Clear();
+
+            txtFirstName.DataBindings.Clear();
+
+            txtLastName.DataBindings.Clear();
+
+            ChkGender.DataBindings.Clear();
+
+            DoB.DataBindings.Clear();
+            LoadData();
+
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            txtId.DataBindings.Clear();
+
+            txtFirstName.DataBindings.Clear();
+
+            txtLastName.DataBindings.Clear();
+
+            ChkGender.DataBindings.Clear();
+
+            DoB.DataBindings.Clear();
+
+            cmd.CommandText = "addStu";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@FirstName", txtFirstName.Text);
+            cmd.Parameters.AddWithValue("@LastName", txtLastName.Text);
+            cmd.Parameters.AddWithValue("@Gender", ChkGender.Checked);
+            cmd.Parameters.AddWithValue("@DoB", DoB.Value);
+            con.Open();
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Inserted", "info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                con.Close();
+                cmd.Parameters.Clear();
+            }
+            LoadData();
+
+        }
     }
 }

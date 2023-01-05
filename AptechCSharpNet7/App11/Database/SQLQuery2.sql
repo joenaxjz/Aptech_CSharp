@@ -26,3 +26,13 @@ go 3
 insert into student (FirstName, LastName, Gender, DoB)
 values (N'Quách Thị', N'Diệu Hiền', 0, '2003-12-10')
 go 3
+
+
+create proc updateStu
+@FirstName nvarchar(50), @LastName nvarchar(50), @Gender bit, @DoB date, @Id int
+as
+begin
+	update Student set FirstName = @FirstName, LastName = @LastName, Gender = @Gender, DoB = @DoB
+	where Id = @Id
+end
+go

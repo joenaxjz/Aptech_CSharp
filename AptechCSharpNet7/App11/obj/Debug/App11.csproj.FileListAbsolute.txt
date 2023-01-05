@@ -3,10 +3,9 @@ C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\App11\bin\Debug\App11.
 C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\App11\bin\Debug\App11.pdb
 C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\App11\obj\Debug\App11.csproj.AssemblyReference.cache
 C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\App11\obj\Debug\App11.csproj.SuggestedBindingRedirects.cache
-C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\App11\obj\Debug\App11.App1.resources
 C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\App11\obj\Debug\App11.Properties.Resources.resources
 C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\App11\obj\Debug\App11.csproj.GenerateResource.cache
 C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\App11\obj\Debug\App11.csproj.CoreCompileInputs.cache
 C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\App11\obj\Debug\App11.exe
 C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\App11\obj\Debug\App11.pdb
-C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\App11\obj\Debug\App11.Form2.resources
+C:\Users\acer\source\repos\Aptech_CSharp\AptechCSharpNet7\App11\obj\Debug\App11.Form1.resources

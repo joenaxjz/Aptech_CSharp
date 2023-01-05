@@ -17,7 +17,7 @@ namespace App11
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             // sửa ở đây để chọn form được chạy trc
-            Application.Run(new Form2());
+            Application.Run(new Form1());
         }
     }
 }

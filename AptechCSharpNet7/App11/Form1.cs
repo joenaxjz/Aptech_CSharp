@@ -143,6 +143,7 @@ namespace App11
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            // xóa kí tự nhập sẵn trong textbox
             txtId.DataBindings.Clear();
 
             txtFirstName.DataBindings.Clear();
@@ -153,6 +154,7 @@ namespace App11
 
             DoB.DataBindings.Clear();
 
+            // thực hiện lên insert vào bảng
             cmd.CommandText = "addStu";
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@FirstName", txtFirstName.Text);
@@ -174,8 +176,8 @@ namespace App11
                 con.Close();
                 cmd.Parameters.Clear();
             }
-            LoadData();
 
+            LoadData();
         }
     }
 }

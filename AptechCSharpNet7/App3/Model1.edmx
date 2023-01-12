@@ -1,0 +1,526 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ManageStudentModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="tblClass">
+          <Key>
+            <PropertyRef Name="classId" />
+          </Key>
+          <Property Name="classId" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="className" Type="varchar" MaxLength="255" />
+          <Property Name="deptId" Type="varchar" MaxLength="50" />
+          <Property Name="totId" Type="int" />
+          <Property Name="couId" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tblClassDetail">
+          <Key>
+            <PropertyRef Name="stuId" />
+            <PropertyRef Name="classId" />
+          </Key>
+          <Property Name="stuId" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="classId" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblCource">
+          <Key>
+            <PropertyRef Name="couId" />
+          </Key>
+          <Property Name="couId" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="couName" Type="varchar" MaxLength="255" />
+          <Property Name="couSemeter" Type="int" />
+        </EntityType>
+        <EntityType Name="tblDept">
+          <Key>
+            <PropertyRef Name="deptId" />
+          </Key>
+          <Property Name="deptId" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="deptName" Type="varchar" MaxLength="255" />
+          <Property Name="deptAddress" Type="nvarchar" MaxLength="255" />
+          <Property Name="deptPhone" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="tblExam">
+          <Key>
+            <PropertyRef Name="subjectId" />
+            <PropertyRef Name="stuId" />
+          </Key>
+          <Property Name="subjectId" Type="int" Nullable="false" />
+          <Property Name="stuId" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="examName" Type="varchar" MaxLength="50" />
+          <Property Name="mark1st" Type="int" />
+          <Property Name="mark2nd" Type="int" />
+          <Property Name="status" Type="ntext" />
+        </EntityType>
+        <EntityType Name="tblStudent">
+          <Key>
+            <PropertyRef Name="stuId" />
+          </Key>
+          <Property Name="stuId" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="stuPass" Type="varchar" MaxLength="50" />
+          <Property Name="stuName" Type="nvarchar" MaxLength="255" />
+          <Property Name="stuGender" Type="varchar" MaxLength="3" />
+          <Property Name="stuAddress" Type="nvarchar" MaxLength="255" />
+          <Property Name="stuPhone" Type="varchar" MaxLength="10" />
+          <Property Name="stuEmail" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="tblSubject">
+          <Key>
+            <PropertyRef Name="subjectId" />
+          </Key>
+          <Property Name="subjectId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="subjectName" Type="nvarchar" MaxLength="255" />
+          <Property Name="semeter" Type="int" />
+        </EntityType>
+        <EntityType Name="tblTot">
+          <Key>
+            <PropertyRef Name="totId" />
+          </Key>
+          <Property Name="totId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="totName" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <Association Name="fk_Class_Student_1">
+          <End Role="tblClass" Type="Self.tblClass" Multiplicity="1" />
+          <End Role="tblClassDetail" Type="Self.tblClassDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblClass">
+              <PropertyRef Name="classId" />
+            </Principal>
+            <Dependent Role="tblClassDetail">
+              <PropertyRef Name="classId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Class_Student_2">
+          <End Role="tblStudent" Type="Self.tblStudent" Multiplicity="1" />
+          <End Role="tblClassDetail" Type="Self.tblClassDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblStudent">
+              <PropertyRef Name="stuId" />
+            </Principal>
+            <Dependent Role="tblClassDetail">
+              <PropertyRef Name="stuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_cource_class">
+          <End Role="tblCource" Type="Self.tblCource" Multiplicity="0..1" />
+          <End Role="tblClass" Type="Self.tblClass" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblCource">
+              <PropertyRef Name="couId" />
+            </Principal>
+            <Dependent Role="tblClass">
+              <PropertyRef Name="couId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_dept_class">
+          <End Role="tblDept" Type="Self.tblDept" Multiplicity="0..1" />
+          <End Role="tblClass" Type="Self.tblClass" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblDept">
+              <PropertyRef Name="deptId" />
+            </Principal>
+            <Dependent Role="tblClass">
+              <PropertyRef Name="deptId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Exam_1">
+          <End Role="tblSubject" Type="Self.tblSubject" Multiplicity="1" />
+          <End Role="tblExam" Type="Self.tblExam" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSubject">
+              <PropertyRef Name="subjectId" />
+            </Principal>
+            <Dependent Role="tblExam">
+              <PropertyRef Name="subjectId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Exam_2">
+          <End Role="tblStudent" Type="Self.tblStudent" Multiplicity="1" />
+          <End Role="tblExam" Type="Self.tblExam" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblStudent">
+              <PropertyRef Name="stuId" />
+            </Principal>
+            <Dependent Role="tblExam">
+              <PropertyRef Name="stuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_tot_class">
+          <End Role="tblTot" Type="Self.tblTot" Multiplicity="0..1" />
+          <End Role="tblClass" Type="Self.tblClass" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblTot">
+              <PropertyRef Name="totId" />
+            </Principal>
+            <Dependent Role="tblClass">
+              <PropertyRef Name="totId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ManageStudentModelStoreContainer">
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblClass" EntityType="Self.tblClass" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblClassDetail" EntityType="Self.tblClassDetail" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblCource" EntityType="Self.tblCource" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblDept" EntityType="Self.tblDept" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblExam" EntityType="Self.tblExam" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblStudent" EntityType="Self.tblStudent" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblSubject" EntityType="Self.tblSubject" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblTot" EntityType="Self.tblTot" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="fk_Class_Student_1" Association="Self.fk_Class_Student_1">
+            <End Role="tblClass" EntitySet="tblClass" />
+            <End Role="tblClassDetail" EntitySet="tblClassDetail" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Class_Student_2" Association="Self.fk_Class_Student_2">
+            <End Role="tblStudent" EntitySet="tblStudent" />
+            <End Role="tblClassDetail" EntitySet="tblClassDetail" />
+          </AssociationSet>
+          <AssociationSet Name="fk_cource_class" Association="Self.fk_cource_class">
+            <End Role="tblCource" EntitySet="tblCource" />
+            <End Role="tblClass" EntitySet="tblClass" />
+          </AssociationSet>
+          <AssociationSet Name="fk_dept_class" Association="Self.fk_dept_class">
+            <End Role="tblDept" EntitySet="tblDept" />
+            <End Role="tblClass" EntitySet="tblClass" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Exam_1" Association="Self.fk_Exam_1">
+            <End Role="tblSubject" EntitySet="tblSubject" />
+            <End Role="tblExam" EntitySet="tblExam" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Exam_2" Association="Self.fk_Exam_2">
+            <End Role="tblStudent" EntitySet="tblStudent" />
+            <End Role="tblExam" EntitySet="tblExam" />
+          </AssociationSet>
+          <AssociationSet Name="fk_tot_class" Association="Self.fk_tot_class">
+            <End Role="tblTot" EntitySet="tblTot" />
+            <End Role="tblClass" EntitySet="tblClass" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ManageStudentModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tblClass">
+          <Key>
+            <PropertyRef Name="classId" />
+          </Key>
+          <Property Name="classId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="className" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="deptId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="totId" Type="Int32" />
+          <Property Name="couId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tblCource" Relationship="Self.fk_cource_class" FromRole="tblClass" ToRole="tblCource" />
+          <NavigationProperty Name="tblDept" Relationship="Self.fk_dept_class" FromRole="tblClass" ToRole="tblDept" />
+          <NavigationProperty Name="tblTot" Relationship="Self.fk_tot_class" FromRole="tblClass" ToRole="tblTot" />
+          <NavigationProperty Name="tblStudents" Relationship="Self.tblClassDetail" FromRole="tblClass" ToRole="tblStudent" />
+        </EntityType>
+        <EntityType Name="tblCource">
+          <Key>
+            <PropertyRef Name="couId" />
+          </Key>
+          <Property Name="couId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="couName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="couSemeter" Type="Int32" />
+          <NavigationProperty Name="tblClasses" Relationship="Self.fk_cource_class" FromRole="tblCource" ToRole="tblClass" />
+        </EntityType>
+        <EntityType Name="tblDept">
+          <Key>
+            <PropertyRef Name="deptId" />
+          </Key>
+          <Property Name="deptId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="deptName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="deptAddress" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="deptPhone" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tblClasses" Relationship="Self.fk_dept_class" FromRole="tblDept" ToRole="tblClass" />
+        </EntityType>
+        <EntityType Name="tblExam">
+          <Key>
+            <PropertyRef Name="subjectId" />
+            <PropertyRef Name="stuId" />
+          </Key>
+          <Property Name="subjectId" Type="Int32" Nullable="false" />
+          <Property Name="stuId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="examName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="mark1st" Type="Int32" />
+          <Property Name="mark2nd" Type="Int32" />
+          <Property Name="status" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tblSubject" Relationship="Self.fk_Exam_1" FromRole="tblExam" ToRole="tblSubject" />
+          <NavigationProperty Name="tblStudent" Relationship="Self.fk_Exam_2" FromRole="tblExam" ToRole="tblStudent" />
+        </EntityType>
+        <EntityType Name="tblStudent">
+          <Key>
+            <PropertyRef Name="stuId" />
+          </Key>
+          <Property Name="stuId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="stuPass" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="stuName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="stuGender" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="stuAddress" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="stuPhone" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="stuEmail" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tblExams" Relationship="Self.fk_Exam_2" FromRole="tblStudent" ToRole="tblExam" />
+          <NavigationProperty Name="tblClasses" Relationship="Self.tblClassDetail" FromRole="tblStudent" ToRole="tblClass" />
+        </EntityType>
+        <EntityType Name="tblSubject">
+          <Key>
+            <PropertyRef Name="subjectId" />
+          </Key>
+          <Property Name="subjectId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="subjectName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="semeter" Type="Int32" />
+          <NavigationProperty Name="tblExams" Relationship="Self.fk_Exam_1" FromRole="tblSubject" ToRole="tblExam" />
+        </EntityType>
+        <EntityType Name="tblTot">
+          <Key>
+            <PropertyRef Name="totId" />
+          </Key>
+          <Property Name="totId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="totName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tblClasses" Relationship="Self.fk_tot_class" FromRole="tblTot" ToRole="tblClass" />
+        </EntityType>
+        <Association Name="fk_cource_class">
+          <End Role="tblCource" Type="Self.tblCource" Multiplicity="0..1" />
+          <End Role="tblClass" Type="Self.tblClass" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblCource">
+              <PropertyRef Name="couId" />
+            </Principal>
+            <Dependent Role="tblClass">
+              <PropertyRef Name="couId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_dept_class">
+          <End Role="tblDept" Type="Self.tblDept" Multiplicity="0..1" />
+          <End Role="tblClass" Type="Self.tblClass" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblDept">
+              <PropertyRef Name="deptId" />
+            </Principal>
+            <Dependent Role="tblClass">
+              <PropertyRef Name="deptId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_tot_class">
+          <End Role="tblTot" Type="Self.tblTot" Multiplicity="0..1" />
+          <End Role="tblClass" Type="Self.tblClass" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblTot">
+              <PropertyRef Name="totId" />
+            </Principal>
+            <Dependent Role="tblClass">
+              <PropertyRef Name="totId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Exam_1">
+          <End Role="tblSubject" Type="Self.tblSubject" Multiplicity="1" />
+          <End Role="tblExam" Type="Self.tblExam" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSubject">
+              <PropertyRef Name="subjectId" />
+            </Principal>
+            <Dependent Role="tblExam">
+              <PropertyRef Name="subjectId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Exam_2">
+          <End Role="tblStudent" Type="Self.tblStudent" Multiplicity="1" />
+          <End Role="tblExam" Type="Self.tblExam" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblStudent">
+              <PropertyRef Name="stuId" />
+            </Principal>
+            <Dependent Role="tblExam">
+              <PropertyRef Name="stuId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tblClassDetail">
+          <End Role="tblClass" Type="Self.tblClass" Multiplicity="*" />
+          <End Role="tblStudent" Type="Self.tblStudent" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="ManageStudentEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <EntitySet Name="tblClasses" EntityType="Self.tblClass" />
+          <EntitySet Name="tblCources" EntityType="Self.tblCource" />
+          <EntitySet Name="tblDepts" EntityType="Self.tblDept" />
+          <EntitySet Name="tblExams" EntityType="Self.tblExam" />
+          <EntitySet Name="tblStudents" EntityType="Self.tblStudent" />
+          <EntitySet Name="tblSubjects" EntityType="Self.tblSubject" />
+          <EntitySet Name="tblTots" EntityType="Self.tblTot" />
+          <AssociationSet Name="fk_cource_class" Association="Self.fk_cource_class">
+            <End Role="tblCource" EntitySet="tblCources" />
+            <End Role="tblClass" EntitySet="tblClasses" />
+          </AssociationSet>
+          <AssociationSet Name="fk_dept_class" Association="Self.fk_dept_class">
+            <End Role="tblDept" EntitySet="tblDepts" />
+            <End Role="tblClass" EntitySet="tblClasses" />
+          </AssociationSet>
+          <AssociationSet Name="fk_tot_class" Association="Self.fk_tot_class">
+            <End Role="tblTot" EntitySet="tblTots" />
+            <End Role="tblClass" EntitySet="tblClasses" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Exam_1" Association="Self.fk_Exam_1">
+            <End Role="tblSubject" EntitySet="tblSubjects" />
+            <End Role="tblExam" EntitySet="tblExams" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Exam_2" Association="Self.fk_Exam_2">
+            <End Role="tblStudent" EntitySet="tblStudents" />
+            <End Role="tblExam" EntitySet="tblExams" />
+          </AssociationSet>
+          <AssociationSet Name="tblClassDetail" Association="Self.tblClassDetail">
+            <End Role="tblClass" EntitySet="tblClasses" />
+            <End Role="tblStudent" EntitySet="tblStudents" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ManageStudentModelStoreContainer" CdmEntityContainer="ManageStudentEntities">
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="ManageStudentModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblClasses">
+            <EntityTypeMapping TypeName="ManageStudentModel.tblClass">
+              <MappingFragment StoreEntitySet="tblClass">
+                <ScalarProperty Name="classId" ColumnName="classId" />
+                <ScalarProperty Name="className" ColumnName="className" />
+                <ScalarProperty Name="deptId" ColumnName="deptId" />
+                <ScalarProperty Name="totId" ColumnName="totId" />
+                <ScalarProperty Name="couId" ColumnName="couId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblCources">
+            <EntityTypeMapping TypeName="ManageStudentModel.tblCource">
+              <MappingFragment StoreEntitySet="tblCource">
+                <ScalarProperty Name="couId" ColumnName="couId" />
+                <ScalarProperty Name="couName" ColumnName="couName" />
+                <ScalarProperty Name="couSemeter" ColumnName="couSemeter" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblDepts">
+            <EntityTypeMapping TypeName="ManageStudentModel.tblDept">
+              <MappingFragment StoreEntitySet="tblDept">
+                <ScalarProperty Name="deptId" ColumnName="deptId" />
+                <ScalarProperty Name="deptName" ColumnName="deptName" />
+                <ScalarProperty Name="deptAddress" ColumnName="deptAddress" />
+                <ScalarProperty Name="deptPhone" ColumnName="deptPhone" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblExams">
+            <EntityTypeMapping TypeName="ManageStudentModel.tblExam">
+              <MappingFragment StoreEntitySet="tblExam">
+                <ScalarProperty Name="subjectId" ColumnName="subjectId" />
+                <ScalarProperty Name="stuId" ColumnName="stuId" />
+                <ScalarProperty Name="examName" ColumnName="examName" />
+                <ScalarProperty Name="mark1st" ColumnName="mark1st" />
+                <ScalarProperty Name="mark2nd" ColumnName="mark2nd" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblStudents">
+            <EntityTypeMapping TypeName="ManageStudentModel.tblStudent">
+              <MappingFragment StoreEntitySet="tblStudent">
+                <ScalarProperty Name="stuId" ColumnName="stuId" />
+                <ScalarProperty Name="stuPass" ColumnName="stuPass" />
+                <ScalarProperty Name="stuName" ColumnName="stuName" />
+                <ScalarProperty Name="stuGender" ColumnName="stuGender" />
+                <ScalarProperty Name="stuAddress" ColumnName="stuAddress" />
+                <ScalarProperty Name="stuPhone" ColumnName="stuPhone" />
+                <ScalarProperty Name="stuEmail" ColumnName="stuEmail" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblSubjects">
+            <EntityTypeMapping TypeName="ManageStudentModel.tblSubject">
+              <MappingFragment StoreEntitySet="tblSubject">
+                <ScalarProperty Name="subjectId" ColumnName="subjectId" />
+                <ScalarProperty Name="subjectName" ColumnName="subjectName" />
+                <ScalarProperty Name="semeter" ColumnName="semeter" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblTots">
+            <EntityTypeMapping TypeName="ManageStudentModel.tblTot">
+              <MappingFragment StoreEntitySet="tblTot">
+                <ScalarProperty Name="totId" ColumnName="totId" />
+                <ScalarProperty Name="totName" ColumnName="totName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="tblClassDetail" TypeName="ManageStudentModel.tblClassDetail" StoreEntitySet="tblClassDetail">
+            <EndProperty Name="tblClass">
+              <ScalarProperty Name="classId" ColumnName="classId" />
+            </EndProperty>
+            <EndProperty Name="tblStudent">
+              <ScalarProperty Name="stuId" ColumnName="stuId" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

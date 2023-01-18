@@ -1,6 +1,7 @@
 ﻿use master
 go
 
+drop database if exists ManageStudent
 create database ManageStudent
 go
 
@@ -15,7 +16,12 @@ create table tblStudent (
 	stuAddress nvarchar(255),
 	stuPhone varchar(10),
 	stuEmail varchar(255),
+	stuDoB date
 )
+
+alter table tblStudent add  stuDob date
+
+alter table tblStudent add "status" varchar(3)
 
 drop table if exists tblSubject
 create table tblSubject (
@@ -23,6 +29,9 @@ create table tblSubject (
 	subjectName nvarchar(255),
 	semeter int,
 )	
+
+
+alter table tblSubject add "status" varchar(3)
 
 drop table if exists tblExam
 create table tblExam(
@@ -35,6 +44,9 @@ create table tblExam(
 	primary key (subjectId, stuId)
 )
 
+
+alter table tblExam add "status" varchar(3)
+
 drop table if exists tblDept
 create table tblDept (
 	deptId varchar(50) primary key,
@@ -43,10 +55,17 @@ create table tblDept (
 	deptPhone varchar(10) unique
 )
 
+
+alter table tblDept add "status" varchar(3)
+
 create table tblTot (
 	totId int identity primary key,
 	totName nvarchar(255)
 )
+
+
+alter table tblTot add "status" varchar(3)
+
 
 drop table if exists tblCource
 create table tblCource (
@@ -54,6 +73,9 @@ create table tblCource (
 	couName varchar(255),
 	couSemeter int
 )
+
+
+alter table tblCource add "status" varchar(3)
 
 drop table if exists tblClass
 create table tblClass (
@@ -64,11 +86,15 @@ create table tblClass (
 	couId varchar(50)
 )
 
+alter table tblClass add "status" varchar(3)
+
 create table tblClassDetail (
 	stuId varchar(50),
 	classId varchar(50),
 	primary key (stuId,classId)
 )
+
+
 
 -- insert cource
 insert into tblCource ( couId, couName, couSemeter) values ( 'K030', 'Khoa 030', 1)

@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ManageStudentModelStoreContainer" CdmEntityContainer="ManageStudentEntities">
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="ManageStudentModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblClasses">
+      <EntityTypeMapping TypeName="ManageStudentModel.tblClass">
+        <MappingFragment StoreEntitySet="tblClass">
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="classId" ColumnName="classId" />
+          <ScalarProperty Name="className" ColumnName="className" />
+          <ScalarProperty Name="deptId" ColumnName="deptId" />
+          <ScalarProperty Name="totId" ColumnName="totId" />
+          <ScalarProperty Name="couId" ColumnName="couId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCources">
+      <EntityTypeMapping TypeName="ManageStudentModel.tblCource">
+        <MappingFragment StoreEntitySet="tblCource">
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="couId" ColumnName="couId" />
+          <ScalarProperty Name="couName" ColumnName="couName" />
+          <ScalarProperty Name="couSemeter" ColumnName="couSemeter" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDepts">
+      <EntityTypeMapping TypeName="ManageStudentModel.tblDept">
+        <MappingFragment StoreEntitySet="tblDept">
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="deptId" ColumnName="deptId" />
+          <ScalarProperty Name="deptName" ColumnName="deptName" />
+          <ScalarProperty Name="deptAddress" ColumnName="deptAddress" />
+          <ScalarProperty Name="deptPhone" ColumnName="deptPhone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblExams">
+      <EntityTypeMapping TypeName="ManageStudentModel.tblExam">
+        <MappingFragment StoreEntitySet="tblExam">
+          <ScalarProperty Name="subjectId" ColumnName="subjectId" />
+          <ScalarProperty Name="stuId" ColumnName="stuId" />
+          <ScalarProperty Name="examName" ColumnName="examName" />
+          <ScalarProperty Name="mark1st" ColumnName="mark1st" />
+          <ScalarProperty Name="mark2nd" ColumnName="mark2nd" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblStudents">
+      <EntityTypeMapping TypeName="ManageStudentModel.tblStudent">
+        <MappingFragment StoreEntitySet="tblStudent">
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="stuDob" ColumnName="stuDob" />
+          <ScalarProperty Name="stuId" ColumnName="stuId" />
+          <ScalarProperty Name="stuPass" ColumnName="stuPass" />
+          <ScalarProperty Name="stuName" ColumnName="stuName" />
+          <ScalarProperty Name="stuGender" ColumnName="stuGender" />
+          <ScalarProperty Name="stuAddress" ColumnName="stuAddress" />
+          <ScalarProperty Name="stuPhone" ColumnName="stuPhone" />
+          <ScalarProperty Name="stuEmail" ColumnName="stuEmail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSubjects">
+      <EntityTypeMapping TypeName="ManageStudentModel.tblSubject">
+        <MappingFragment StoreEntitySet="tblSubject">
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="subjectId" ColumnName="subjectId" />
+          <ScalarProperty Name="subjectName" ColumnName="subjectName" />
+          <ScalarProperty Name="semeter" ColumnName="semeter" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTots">
+      <EntityTypeMapping TypeName="ManageStudentModel.tblTot">
+        <MappingFragment StoreEntitySet="tblTot">
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="totId" ColumnName="totId" />
+          <ScalarProperty Name="totName" ColumnName="totName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="tblClassDetail" TypeName="ManageStudentModel.tblClassDetail" StoreEntitySet="tblClassDetail">
+      <EndProperty Name="tblClass">
+        <ScalarProperty Name="classId" ColumnName="classId" />
+      </EndProperty>
+      <EndProperty Name="tblStudent">
+        <ScalarProperty Name="stuId" ColumnName="stuId" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -25,6 +25,7 @@ namespace App3
         public string deptId { get; set; }
         public Nullable<int> totId { get; set; }
         public string couId { get; set; }
+        public string status { get; set; }
     
         public virtual tblCource tblCource { get; set; }
         public virtual tblDept tblDept { get; set; }

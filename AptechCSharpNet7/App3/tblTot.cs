@@ -22,6 +22,7 @@ namespace App3
     
         public int totId { get; set; }
         public string totName { get; set; }
+        public string status { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tblClass> tblClasses { get; set; }

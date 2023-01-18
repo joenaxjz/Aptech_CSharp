@@ -5,13 +5,13 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="64ada80f5b804330a28eeeb633838214" Name="Diagram1">
-        <EntityTypeShape EntityType="ManageStudentModel.sysdiagram" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ManageStudentModel.tblClass" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManageStudentModel.sysdiagram" Width="1.5" PointX="7.875" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManageStudentModel.tblClass" Width="1.5" PointX="5.375" PointY="4.5" IsExpanded="true" />
         <EntityTypeShape EntityType="ManageStudentModel.tblCource" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="ManageStudentModel.tblDept" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="ManageStudentModel.tblExam" Width="1.5" PointX="7.5" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="ManageStudentModel.tblStudent" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="ManageStudentModel.tblSubject" Width="1.5" PointX="5.25" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManageStudentModel.tblExam" Width="1.5" PointX="3.375" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManageStudentModel.tblStudent" Width="1.5" PointX="8.5" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManageStudentModel.tblSubject" Width="1.5" PointX="10.375" PointY="5.375" IsExpanded="true" />
         <EntityTypeShape EntityType="ManageStudentModel.tblTot" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
         <AssociationConnector Association="ManageStudentModel.fk_cource_class" ManuallyRouted="false" />
         <AssociationConnector Association="ManageStudentModel.fk_dept_class" ManuallyRouted="false" />

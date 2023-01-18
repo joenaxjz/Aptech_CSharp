@@ -23,6 +23,7 @@ namespace App3
         public int subjectId { get; set; }
         public string subjectName { get; set; }
         public Nullable<int> semeter { get; set; }
+        public string status { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tblExam> tblExams { get; set; }

@@ -28,6 +28,8 @@ namespace App3
         public string stuAddress { get; set; }
         public string stuPhone { get; set; }
         public string stuEmail { get; set; }
+        public Nullable<System.DateTime> stuDob { get; set; }
+        public string status { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tblExam> tblExams { get; set; }

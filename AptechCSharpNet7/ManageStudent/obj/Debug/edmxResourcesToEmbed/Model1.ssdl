@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ManageStudentModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'ManageStudent.dbo.tblAdmin' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="tblAdmin">
+          <Property Name="username" Type="varchar" MaxLength="10" />
+          <Property Name="password" Type="varchar" MaxLength="20" />
+          <Property Name="status" Type="varchar" MaxLength="3" />
+        </EntityType>-->
+  <EntityType Name="tblClass">
+    <Key>
+      <PropertyRef Name="classId" />
+    </Key>
+    <Property Name="classId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="className" Type="varchar" MaxLength="255" />
+    <Property Name="deptId" Type="varchar" MaxLength="50" />
+    <Property Name="totId" Type="int" />
+    <Property Name="couId" Type="varchar" MaxLength="50" />
+    <Property Name="status" Type="varchar" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="tblClassDetail">
+    <Key>
+      <PropertyRef Name="stuId" />
+      <PropertyRef Name="classId" />
+    </Key>
+    <Property Name="stuId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="classId" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblCourse">
+    <Key>
+      <PropertyRef Name="couId" />
+    </Key>
+    <Property Name="couId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="couName" Type="varchar" MaxLength="255" />
+    <Property Name="couSemeter" Type="int" />
+    <Property Name="status" Type="varchar" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="tblDept">
+    <Key>
+      <PropertyRef Name="deptId" />
+    </Key>
+    <Property Name="deptId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="deptName" Type="varchar" MaxLength="255" />
+    <Property Name="deptAddress" Type="nvarchar" MaxLength="255" />
+    <Property Name="deptPhone" Type="varchar" MaxLength="10" />
+    <Property Name="status" Type="varchar" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="tblExam">
+    <Key>
+      <PropertyRef Name="subjectId" />
+      <PropertyRef Name="stuId" />
+    </Key>
+    <Property Name="subjectId" Type="int" Nullable="false" />
+    <Property Name="stuId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="examName" Type="varchar" MaxLength="50" />
+    <Property Name="mark1st" Type="int" />
+    <Property Name="mark2nd" Type="int" />
+    <Property Name="status" Type="varchar" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="tblStudent">
+    <Key>
+      <PropertyRef Name="stuId" />
+    </Key>
+    <Property Name="stuId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="stuPass" Type="varchar" MaxLength="50" />
+    <Property Name="stuName" Type="nvarchar" MaxLength="255" />
+    <Property Name="stuGender" Type="varchar" MaxLength="3" />
+    <Property Name="stuAddress" Type="nvarchar" MaxLength="255" />
+    <Property Name="stuPhone" Type="varchar" MaxLength="10" />
+    <Property Name="stuEmail" Type="varchar" MaxLength="255" />
+    <Property Name="stuDoB" Type="date" />
+    <Property Name="status" Type="varchar" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="tblSubject">
+    <Key>
+      <PropertyRef Name="subjectId" />
+    </Key>
+    <Property Name="subjectId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="subjectName" Type="nvarchar" MaxLength="255" />
+    <Property Name="semeter" Type="int" />
+    <Property Name="status" Type="varchar" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="tblTot">
+    <Key>
+      <PropertyRef Name="totId" />
+    </Key>
+    <Property Name="totId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="totName" Type="nvarchar" MaxLength="255" />
+    <Property Name="status" Type="varchar" MaxLength="3" />
+  </EntityType>
+  <Association Name="fk_Class_Student_1">
+    <End Role="tblClass" Type="Self.tblClass" Multiplicity="1" />
+    <End Role="tblClassDetail" Type="Self.tblClassDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblClass">
+        <PropertyRef Name="classId" />
+      </Principal>
+      <Dependent Role="tblClassDetail">
+        <PropertyRef Name="classId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Class_Student_2">
+    <End Role="tblStudent" Type="Self.tblStudent" Multiplicity="1" />
+    <End Role="tblClassDetail" Type="Self.tblClassDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblStudent">
+        <PropertyRef Name="stuId" />
+      </Principal>
+      <Dependent Role="tblClassDetail">
+        <PropertyRef Name="stuId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_course_class">
+    <End Role="tblCourse" Type="Self.tblCourse" Multiplicity="0..1" />
+    <End Role="tblClass" Type="Self.tblClass" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCourse">
+        <PropertyRef Name="couId" />
+      </Principal>
+      <Dependent Role="tblClass">
+        <PropertyRef Name="couId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_dept_class">
+    <End Role="tblDept" Type="Self.tblDept" Multiplicity="0..1" />
+    <End Role="tblClass" Type="Self.tblClass" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblDept">
+        <PropertyRef Name="deptId" />
+      </Principal>
+      <Dependent Role="tblClass">
+        <PropertyRef Name="deptId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Exam_1">
+    <End Role="tblSubject" Type="Self.tblSubject" Multiplicity="1" />
+    <End Role="tblExam" Type="Self.tblExam" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSubject">
+        <PropertyRef Name="subjectId" />
+      </Principal>
+      <Dependent Role="tblExam">
+        <PropertyRef Name="subjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Exam_2">
+    <End Role="tblStudent" Type="Self.tblStudent" Multiplicity="1" />
+    <End Role="tblExam" Type="Self.tblExam" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblStudent">
+        <PropertyRef Name="stuId" />
+      </Principal>
+      <Dependent Role="tblExam">
+        <PropertyRef Name="stuId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tot_class">
+    <End Role="tblTot" Type="Self.tblTot" Multiplicity="0..1" />
+    <End Role="tblClass" Type="Self.tblClass" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblTot">
+        <PropertyRef Name="totId" />
+      </Principal>
+      <Dependent Role="tblClass">
+        <PropertyRef Name="totId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ManageStudentModelStoreContainer">
+    <EntitySet Name="tblClass" EntityType="Self.tblClass" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblClassDetail" EntityType="Self.tblClassDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCourse" EntityType="Self.tblCourse" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblDept" EntityType="Self.tblDept" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblExam" EntityType="Self.tblExam" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblStudent" EntityType="Self.tblStudent" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblSubject" EntityType="Self.tblSubject" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblTot" EntityType="Self.tblTot" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="fk_Class_Student_1" Association="Self.fk_Class_Student_1">
+      <End Role="tblClass" EntitySet="tblClass" />
+      <End Role="tblClassDetail" EntitySet="tblClassDetail" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Class_Student_2" Association="Self.fk_Class_Student_2">
+      <End Role="tblStudent" EntitySet="tblStudent" />
+      <End Role="tblClassDetail" EntitySet="tblClassDetail" />
+    </AssociationSet>
+    <AssociationSet Name="fk_course_class" Association="Self.fk_course_class">
+      <End Role="tblCourse" EntitySet="tblCourse" />
+      <End Role="tblClass" EntitySet="tblClass" />
+    </AssociationSet>
+    <AssociationSet Name="fk_dept_class" Association="Self.fk_dept_class">
+      <End Role="tblDept" EntitySet="tblDept" />
+      <End Role="tblClass" EntitySet="tblClass" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Exam_1" Association="Self.fk_Exam_1">
+      <End Role="tblSubject" EntitySet="tblSubject" />
+      <End Role="tblExam" EntitySet="tblExam" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Exam_2" Association="Self.fk_Exam_2">
+      <End Role="tblStudent" EntitySet="tblStudent" />
+      <End Role="tblExam" EntitySet="tblExam" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tot_class" Association="Self.fk_tot_class">
+      <End Role="tblTot" EntitySet="tblTot" />
+      <End Role="tblClass" EntitySet="tblClass" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

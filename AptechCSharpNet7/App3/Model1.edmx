@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="ManageStudentModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="ManageStudentModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="sysdiagrams">
           <Key>
             <PropertyRef Name="diagram_id" />
@@ -24,6 +24,7 @@
           <Property Name="deptId" Type="varchar" MaxLength="50" />
           <Property Name="totId" Type="int" />
           <Property Name="couId" Type="varchar" MaxLength="50" />
+          <Property Name="status" Type="varchar" MaxLength="3" />
         </EntityType>
         <EntityType Name="tblClassDetail">
           <Key>
@@ -40,6 +41,7 @@
           <Property Name="couId" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="couName" Type="varchar" MaxLength="255" />
           <Property Name="couSemeter" Type="int" />
+          <Property Name="status" Type="varchar" MaxLength="3" />
         </EntityType>
         <EntityType Name="tblDept">
           <Key>
@@ -49,6 +51,7 @@
           <Property Name="deptName" Type="varchar" MaxLength="255" />
           <Property Name="deptAddress" Type="nvarchar" MaxLength="255" />
           <Property Name="deptPhone" Type="varchar" MaxLength="10" />
+          <Property Name="status" Type="varchar" MaxLength="3" />
         </EntityType>
         <EntityType Name="tblExam">
           <Key>
@@ -73,6 +76,8 @@
           <Property Name="stuAddress" Type="nvarchar" MaxLength="255" />
           <Property Name="stuPhone" Type="varchar" MaxLength="10" />
           <Property Name="stuEmail" Type="varchar" MaxLength="255" />
+          <Property Name="stuDob" Type="date" />
+          <Property Name="status" Type="varchar" MaxLength="3" />
         </EntityType>
         <EntityType Name="tblSubject">
           <Key>
@@ -81,6 +86,7 @@
           <Property Name="subjectId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="subjectName" Type="nvarchar" MaxLength="255" />
           <Property Name="semeter" Type="int" />
+          <Property Name="status" Type="varchar" MaxLength="3" />
         </EntityType>
         <EntityType Name="tblTot">
           <Key>
@@ -88,6 +94,7 @@
           </Key>
           <Property Name="totId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="totName" Type="nvarchar" MaxLength="255" />
+          <Property Name="status" Type="varchar" MaxLength="3" />
         </EntityType>
         <Association Name="fk_Class_Student_1">
           <End Role="tblClass" Type="Self.tblClass" Multiplicity="1" />
@@ -212,8 +219,7 @@
             <End Role="tblClass" EntitySet="tblClass" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ManageStudentModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -240,6 +246,7 @@
           <NavigationProperty Name="tblDept" Relationship="Self.fk_dept_class" FromRole="tblClass" ToRole="tblDept" />
           <NavigationProperty Name="tblTot" Relationship="Self.fk_tot_class" FromRole="tblClass" ToRole="tblTot" />
           <NavigationProperty Name="tblStudents" Relationship="Self.tblClassDetail" FromRole="tblClass" ToRole="tblStudent" />
+          <Property Name="status" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="tblCource">
           <Key>
@@ -249,6 +256,7 @@
           <Property Name="couName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="couSemeter" Type="Int32" />
           <NavigationProperty Name="tblClasses" Relationship="Self.fk_cource_class" FromRole="tblCource" ToRole="tblClass" />
+          <Property Name="status" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="tblDept">
           <Key>
@@ -259,6 +267,7 @@
           <Property Name="deptAddress" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="deptPhone" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="tblClasses" Relationship="Self.fk_dept_class" FromRole="tblDept" ToRole="tblClass" />
+          <Property Name="status" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="tblExam">
           <Key>
@@ -287,6 +296,8 @@
           <Property Name="stuEmail" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="tblExams" Relationship="Self.fk_Exam_2" FromRole="tblStudent" ToRole="tblExam" />
           <NavigationProperty Name="tblClasses" Relationship="Self.tblClassDetail" FromRole="tblStudent" ToRole="tblClass" />
+          <Property Name="stuDob" Type="DateTime" Precision="0" />
+          <Property Name="status" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="tblSubject">
           <Key>
@@ -296,6 +307,7 @@
           <Property Name="subjectName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="semeter" Type="Int32" />
           <NavigationProperty Name="tblExams" Relationship="Self.fk_Exam_1" FromRole="tblSubject" ToRole="tblExam" />
+          <Property Name="status" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="tblTot">
           <Key>
@@ -304,6 +316,7 @@
           <Property Name="totId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="totName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="tblClasses" Relationship="Self.fk_tot_class" FromRole="tblTot" ToRole="tblClass" />
+          <Property Name="status" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
         </EntityType>
         <Association Name="fk_cource_class">
           <End Role="tblCource" Type="Self.tblCource" Multiplicity="0..1" />
@@ -423,6 +436,7 @@
           <EntitySetMapping Name="tblClasses">
             <EntityTypeMapping TypeName="ManageStudentModel.tblClass">
               <MappingFragment StoreEntitySet="tblClass">
+                <ScalarProperty Name="status" ColumnName="status" />
                 <ScalarProperty Name="classId" ColumnName="classId" />
                 <ScalarProperty Name="className" ColumnName="className" />
                 <ScalarProperty Name="deptId" ColumnName="deptId" />
@@ -434,6 +448,7 @@
           <EntitySetMapping Name="tblCources">
             <EntityTypeMapping TypeName="ManageStudentModel.tblCource">
               <MappingFragment StoreEntitySet="tblCource">
+                <ScalarProperty Name="status" ColumnName="status" />
                 <ScalarProperty Name="couId" ColumnName="couId" />
                 <ScalarProperty Name="couName" ColumnName="couName" />
                 <ScalarProperty Name="couSemeter" ColumnName="couSemeter" />
@@ -443,6 +458,7 @@
           <EntitySetMapping Name="tblDepts">
             <EntityTypeMapping TypeName="ManageStudentModel.tblDept">
               <MappingFragment StoreEntitySet="tblDept">
+                <ScalarProperty Name="status" ColumnName="status" />
                 <ScalarProperty Name="deptId" ColumnName="deptId" />
                 <ScalarProperty Name="deptName" ColumnName="deptName" />
                 <ScalarProperty Name="deptAddress" ColumnName="deptAddress" />
@@ -465,6 +481,8 @@
           <EntitySetMapping Name="tblStudents">
             <EntityTypeMapping TypeName="ManageStudentModel.tblStudent">
               <MappingFragment StoreEntitySet="tblStudent">
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="stuDob" ColumnName="stuDob" />
                 <ScalarProperty Name="stuId" ColumnName="stuId" />
                 <ScalarProperty Name="stuPass" ColumnName="stuPass" />
                 <ScalarProperty Name="stuName" ColumnName="stuName" />
@@ -478,6 +496,7 @@
           <EntitySetMapping Name="tblSubjects">
             <EntityTypeMapping TypeName="ManageStudentModel.tblSubject">
               <MappingFragment StoreEntitySet="tblSubject">
+                <ScalarProperty Name="status" ColumnName="status" />
                 <ScalarProperty Name="subjectId" ColumnName="subjectId" />
                 <ScalarProperty Name="subjectName" ColumnName="subjectName" />
                 <ScalarProperty Name="semeter" ColumnName="semeter" />
@@ -487,6 +506,7 @@
           <EntitySetMapping Name="tblTots">
             <EntityTypeMapping TypeName="ManageStudentModel.tblTot">
               <MappingFragment StoreEntitySet="tblTot">
+                <ScalarProperty Name="status" ColumnName="status" />
                 <ScalarProperty Name="totId" ColumnName="totId" />
                 <ScalarProperty Name="totName" ColumnName="totName" />
               </MappingFragment>

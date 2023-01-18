@@ -24,6 +24,7 @@ namespace App3
         public string deptName { get; set; }
         public string deptAddress { get; set; }
         public string deptPhone { get; set; }
+        public string status { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tblClass> tblClasses { get; set; }

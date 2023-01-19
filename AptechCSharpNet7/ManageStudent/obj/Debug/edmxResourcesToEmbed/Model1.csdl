@@ -149,7 +149,7 @@
     <End Role="tblClass" Type="Self.tblClass" Multiplicity="*" />
     <End Role="tblStudent" Type="Self.tblStudent" Multiplicity="*" />
   </Association>
-  <EntityContainer Name="ManageStudentEntities3" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="ManageStudentEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="tblClasses" EntityType="Self.tblClass" />
     <EntitySet Name="tblCourses" EntityType="Self.tblCourse" />
     <EntitySet Name="tblDepts" EntityType="Self.tblDept" />

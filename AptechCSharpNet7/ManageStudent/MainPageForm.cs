@@ -33,9 +33,9 @@ namespace ManageStudent
 
         private void btnClass_Click(object sender, EventArgs e)
         {
-            StudentForm stuForm = new StudentForm();
+            ClassForm clsForm = new ClassForm();
             this.Hide();
-            stuForm.ShowDialog();
+            clsForm.ShowDialog();
             this.Close();
         }
 

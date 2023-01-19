@@ -13,10 +13,10 @@ namespace ManageStudent
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ManageStudentEntities3 : DbContext
+    public partial class ManageStudentEntities : DbContext
     {
-        public ManageStudentEntities3()
-            : base("name=ManageStudentEntities3")
+        public ManageStudentEntities()
+            : base("name=ManageStudentEntities")
         {
         }
     

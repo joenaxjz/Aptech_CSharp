@@ -42,71 +42,86 @@
             // 
             // btnStu
             // 
-            this.btnStu.Location = new System.Drawing.Point(414, 241);
+            this.btnStu.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnStu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStu.Location = new System.Drawing.Point(401, 241);
             this.btnStu.Name = "btnStu";
             this.btnStu.Size = new System.Drawing.Size(216, 79);
             this.btnStu.TabIndex = 0;
-            this.btnStu.Text = "Quản Lý Sinh Viên";
+            this.btnStu.Text = "Student";
             this.btnStu.UseVisualStyleBackColor = true;
             this.btnStu.Click += new System.EventHandler(this.btnStu_Click);
             // 
             // btnSub
             // 
+            this.btnSub.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSub.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSub.Location = new System.Drawing.Point(813, 241);
             this.btnSub.Name = "btnSub";
             this.btnSub.Size = new System.Drawing.Size(180, 79);
             this.btnSub.TabIndex = 1;
-            this.btnSub.Text = "Quản Lý Môn Học";
+            this.btnSub.Text = "Subject";
             this.btnSub.UseVisualStyleBackColor = true;
             this.btnSub.Click += new System.EventHandler(this.btnSub_Click);
             // 
             // btnClass
             // 
+            this.btnClass.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnClass.AutoSize = true;
+            this.btnClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClass.Location = new System.Drawing.Point(12, 31);
             this.btnClass.Name = "btnClass";
             this.btnClass.Size = new System.Drawing.Size(184, 78);
             this.btnClass.TabIndex = 2;
-            this.btnClass.Text = "Quản Lý Lớp Học";
+            this.btnClass.Text = "Class";
             this.btnClass.UseVisualStyleBackColor = true;
             this.btnClass.Click += new System.EventHandler(this.btnClass_Click);
             // 
             // btnDept
             // 
+            this.btnDept.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnDept.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDept.Location = new System.Drawing.Point(813, 31);
             this.btnDept.Name = "btnDept";
             this.btnDept.Size = new System.Drawing.Size(180, 78);
             this.btnDept.TabIndex = 3;
-            this.btnDept.Text = "Quản Lý Khoa";
+            this.btnDept.Text = "Department";
             this.btnDept.UseVisualStyleBackColor = true;
             this.btnDept.Click += new System.EventHandler(this.button4_Click);
             // 
             // btnExam
             // 
+            this.btnExam.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnExam.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExam.Location = new System.Drawing.Point(12, 241);
             this.btnExam.Name = "btnExam";
             this.btnExam.Size = new System.Drawing.Size(184, 79);
             this.btnExam.TabIndex = 4;
-            this.btnExam.Text = "Quản Lý Bài Thi";
+            this.btnExam.Text = "Exam and Test";
             this.btnExam.UseVisualStyleBackColor = true;
             this.btnExam.Click += new System.EventHandler(this.btnExam_Click);
             // 
             // btnTot
             // 
-            this.btnTot.Location = new System.Drawing.Point(401, 419);
+            this.btnTot.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnTot.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTot.Location = new System.Drawing.Point(381, 416);
             this.btnTot.Name = "btnTot";
             this.btnTot.Size = new System.Drawing.Size(254, 81);
             this.btnTot.TabIndex = 5;
-            this.btnTot.Text = "Quản Lý Hệ Đào Tạo";
+            this.btnTot.Text = "Type of Training";
             this.btnTot.UseVisualStyleBackColor = true;
             this.btnTot.Click += new System.EventHandler(this.btnTot_Click);
             // 
             // btnCou
             // 
-            this.btnCou.Location = new System.Drawing.Point(414, 31);
+            this.btnCou.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnCou.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCou.Location = new System.Drawing.Point(401, 42);
             this.btnCou.Name = "btnCou";
             this.btnCou.Size = new System.Drawing.Size(216, 78);
             this.btnCou.TabIndex = 6;
-            this.btnCou.Text = "Quản Lý Khóa Học";
+            this.btnCou.Text = "Course";
             this.btnCou.UseVisualStyleBackColor = true;
             this.btnCou.Click += new System.EventHandler(this.btnCou_Click);
             // 
@@ -115,6 +130,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1005, 563);
             this.Controls.Add(this.btnCou);
             this.Controls.Add(this.btnTot);
@@ -124,10 +140,12 @@
             this.Controls.Add(this.btnSub);
             this.Controls.Add(this.btnStu);
             this.Name = "MainPageForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main Page";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

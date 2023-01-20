@@ -42,7 +42,9 @@
             // 
             // btnStu
             // 
-            this.btnStu.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnStu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnStu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStu.Location = new System.Drawing.Point(401, 241);
             this.btnStu.Name = "btnStu";
@@ -54,7 +56,9 @@
             // 
             // btnSub
             // 
-            this.btnSub.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSub.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSub.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSub.Location = new System.Drawing.Point(813, 241);
             this.btnSub.Name = "btnSub";
@@ -66,7 +70,9 @@
             // 
             // btnClass
             // 
-            this.btnClass.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnClass.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClass.AutoSize = true;
             this.btnClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClass.Location = new System.Drawing.Point(12, 31);
@@ -79,7 +85,9 @@
             // 
             // btnDept
             // 
-            this.btnDept.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnDept.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDept.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDept.Location = new System.Drawing.Point(813, 31);
             this.btnDept.Name = "btnDept";
@@ -91,7 +99,9 @@
             // 
             // btnExam
             // 
-            this.btnExam.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnExam.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExam.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExam.Location = new System.Drawing.Point(12, 241);
             this.btnExam.Name = "btnExam";
@@ -103,7 +113,9 @@
             // 
             // btnTot
             // 
-            this.btnTot.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnTot.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTot.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTot.Location = new System.Drawing.Point(381, 416);
             this.btnTot.Name = "btnTot";
@@ -115,7 +127,9 @@
             // 
             // btnCou
             // 
-            this.btnCou.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnCou.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCou.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCou.Location = new System.Drawing.Point(401, 42);
             this.btnCou.Name = "btnCou";

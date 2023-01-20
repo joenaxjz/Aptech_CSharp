@@ -29,7 +29,7 @@ namespace ManageStudent
         {
             using (var ef = new ManageStudentEntities())
             {
-                bindingSource1.DataSource = ef.tblClasses.Select(cls => new
+                bindingSource1.DataSource = ef.tblClasses.Where(cou => cou.status == "yes").Select(cls => new
                 {
                     cls.classId,
                     cls.className,
@@ -54,6 +54,7 @@ namespace ManageStudent
         {
             using ( var ef = new ManageStudentEntities())
             {
+                MessageBox.Show("Are you Sure?", "info", MessageBoxButtons.OKCancel);
                 var findIdClass = txtClassId.Text;
                 var obj = ef.tblClasses.FirstOrDefault(cls => cls.classId== findIdClass);
                 if (obj != null)
@@ -65,7 +66,7 @@ namespace ManageStudent
                     obj.status = txtSta.Text;
                 }
                 ef.SaveChanges();
-                bindingSource1.DataSource = ef.tblClasses.Select(cls => new
+                bindingSource1.DataSource = ef.tblClasses.Where(cls => cls.status == "yes").Select(cls => new
                 {
                     cls.classId,
                     cls.className,
@@ -82,6 +83,7 @@ namespace ManageStudent
         {
             using (var ef = new ManageStudentEntities())
             {
+                MessageBox.Show("Are you Sure?", "info", MessageBoxButtons.OKCancel);
                 var cls = new tblClass();
                 cls.classId = txtClassId.Text;
                 cls.className = txtClassName.Text;
@@ -93,7 +95,7 @@ namespace ManageStudent
                 ef.tblClasses.Add(cls);
                 ef.SaveChanges();
 
-                bindingSource1.DataSource = ef.tblClasses.Select(clss => new
+                bindingSource1.DataSource = ef.tblClasses.Where(clss => clss.status == "yes").Select(clss => new
                 {
                     clss.classId,
                     clss.className,
@@ -102,7 +104,7 @@ namespace ManageStudent
                     clss.couId,
                     clss.status
                 }).ToList();
-                MessageBox.Show("Added", "info", MessageBoxButtons.OK);
+              MessageBox.Show("Added", "info", MessageBoxButtons.OK);
 
             }
 

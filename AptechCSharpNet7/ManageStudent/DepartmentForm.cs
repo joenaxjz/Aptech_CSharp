@@ -47,6 +47,8 @@ namespace ManageStudent
 
         private void btnUpd_Click(object sender, EventArgs e)
         {
+            Console.InputEncoding = Encoding.Unicode;
+            Console.OutputEncoding = Encoding.Unicode;
             using (var ef = new ManageStudentEntities())
             {
                 MessageBox.Show("Are you sure?", "info", MessageBoxButtons.OKCancel);
@@ -74,7 +76,7 @@ namespace ManageStudent
                 }
                 else
                 {
-                    MessageBox.Show("Some text box is null, plese type the value inside");
+                    MessageBox.Show("Some text box has value is null, please enter all of value");
                 }
                 }
             
@@ -82,8 +84,11 @@ namespace ManageStudent
 
             private void btnAdd_Click(object sender, EventArgs e)
             {
-                using ( var ef = new ManageStudentEntities())
+            Console.InputEncoding = Encoding.Unicode;
+            Console.OutputEncoding = Encoding.Unicode;
+            using ( var ef = new ManageStudentEntities())
             {
+
                 MessageBox.Show("Are you Sure?", "info", MessageBoxButtons.OKCancel);
                 
                 var dept = new tblDept();
@@ -96,7 +101,7 @@ namespace ManageStudent
                 {
                     ef.tblDepts.Add(dept);
                     ef.SaveChanges();
-                    bindingSource1.DataSource = ef.tblDepts.Where(depts => dept.status == "yes").Select(depts => new
+                    bindingSource1.DataSource = ef.tblDepts.Where(depts => depts.status == "yes").Select(depts => new
                     {
                         depts.deptId,
                         depts.deptName,

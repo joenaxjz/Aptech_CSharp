@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DepartmentForm));
             this.btnBackToMainPage = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -44,6 +44,8 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnUpd = new System.Windows.Forms.ToolStripButton();
+            this.btnAdd = new System.Windows.Forms.ToolStripButton();
             this.txtSta = new System.Windows.Forms.TextBox();
             this.txtDeptAdrs = new System.Windows.Forms.TextBox();
             this.txtDeptName = new System.Windows.Forms.TextBox();
@@ -54,8 +56,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtDeptNum = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnUpd = new System.Windows.Forms.ToolStripButton();
-            this.btnAdd = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
@@ -76,8 +76,8 @@
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -115,7 +115,7 @@
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(333, 25);
+            this.bindingNavigator1.Size = new System.Drawing.Size(302, 25);
             this.bindingNavigator1.TabIndex = 3;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -187,6 +187,28 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
+            // btnUpd
+            // 
+            this.btnUpd.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnUpd.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpd.Image = ((System.Drawing.Image)(resources.GetObject("btnUpd.Image")));
+            this.btnUpd.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnUpd.Name = "btnUpd";
+            this.btnUpd.Size = new System.Drawing.Size(56, 22);
+            this.btnUpd.Text = "Update";
+            this.btnUpd.Click += new System.EventHandler(this.btnUpd_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnAdd.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
+            this.btnAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(37, 22);
+            this.btnAdd.Text = "Add";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
             // txtSta
             // 
             this.txtSta.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -231,10 +253,10 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(424, 276);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(417, 276);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 16);
+            this.label4.Size = new System.Drawing.Size(54, 16);
             this.label4.TabIndex = 16;
             this.label4.Text = "Status:";
             // 
@@ -242,10 +264,10 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(654, 41);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(635, 43);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(134, 16);
+            this.label3.Size = new System.Drawing.Size(153, 16);
             this.label3.TabIndex = 15;
             this.label3.Text = "Department Address:";
             // 
@@ -253,10 +275,10 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(74, 145);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(58, 145);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 16);
+            this.label2.Size = new System.Drawing.Size(136, 16);
             this.label2.TabIndex = 14;
             this.label2.Text = "Department Name:";
             // 
@@ -264,10 +286,10 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(98, 41);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(84, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 16);
+            this.label1.Size = new System.Drawing.Size(110, 16);
             this.label1.TabIndex = 13;
             this.label1.Text = "Department ID:";
             // 
@@ -285,39 +307,18 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(615, 143);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(591, 141);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(173, 16);
+            this.label5.Size = new System.Drawing.Size(197, 16);
             this.label5.TabIndex = 21;
             this.label5.Text = "Department Phone Number:";
-            // 
-            // btnUpd
-            // 
-            this.btnUpd.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btnUpd.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpd.Image = ((System.Drawing.Image)(resources.GetObject("btnUpd.Image")));
-            this.btnUpd.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnUpd.Name = "btnUpd";
-            this.btnUpd.Size = new System.Drawing.Size(56, 22);
-            this.btnUpd.Text = "Update";
-            this.btnUpd.Click += new System.EventHandler(this.btnUpd_Click);
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btnAdd.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(37, 22);
-            this.btnAdd.Text = "Add";
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // DepartmentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.MediumAquamarine;
             this.ClientSize = new System.Drawing.Size(1263, 800);
             this.Controls.Add(this.txtDeptNum);
             this.Controls.Add(this.label5);

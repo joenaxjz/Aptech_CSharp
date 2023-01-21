@@ -47,6 +47,8 @@ namespace ManageStudent
         {
             using ( var ef = new ManageStudentEntities())
             {
+                Console.InputEncoding = Encoding.Unicode;
+                Console.OutputEncoding = Encoding.Unicode;
                 MessageBox.Show("Are you Sure?", "info", MessageBoxButtons.OKCancel);
                 var findCouId = txtCouId.Text;
                 var obj = ef.tblCourses.FirstOrDefault(cou => cou.couId== findCouId);
@@ -72,6 +74,8 @@ namespace ManageStudent
         {
             using (var ef = new ManageStudentEntities())
             {
+                Console.InputEncoding = Encoding.Unicode;
+                Console.OutputEncoding = Encoding.Unicode;
                 MessageBox.Show("Are you Sure?", "info", MessageBoxButtons.OKCancel);
                 var cou = new tblCourse();
                 cou.couId = txtCouId.Text;

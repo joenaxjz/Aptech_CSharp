@@ -53,10 +53,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtClassId = new System.Windows.Forms.TextBox();
             this.txtClassName = new System.Windows.Forms.TextBox();
-            this.txtDeptId = new System.Windows.Forms.TextBox();
             this.txtTotId = new System.Windows.Forms.TextBox();
             this.txtCouId = new System.Windows.Forms.TextBox();
             this.txtSta = new System.Windows.Forms.TextBox();
+            this.txtDeptId = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
@@ -295,15 +295,6 @@
             this.txtClassName.TabIndex = 11;
             this.txtClassName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // txtDeptId
-            // 
-            this.txtDeptId.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtDeptId.Location = new System.Drawing.Point(126, 205);
-            this.txtDeptId.Name = "txtDeptId";
-            this.txtDeptId.Size = new System.Drawing.Size(255, 20);
-            this.txtDeptId.TabIndex = 12;
-            this.txtDeptId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // txtTotId
             // 
             this.txtTotId.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -331,16 +322,25 @@
             this.txtSta.TabIndex = 15;
             this.txtSta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // txtDeptId
+            // 
+            this.txtDeptId.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtDeptId.Location = new System.Drawing.Point(126, 209);
+            this.txtDeptId.Name = "txtDeptId";
+            this.txtDeptId.Size = new System.Drawing.Size(255, 20);
+            this.txtDeptId.TabIndex = 16;
+            this.txtDeptId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // ClassForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1091, 643);
+            this.Controls.Add(this.txtDeptId);
             this.Controls.Add(this.txtSta);
             this.Controls.Add(this.txtCouId);
             this.Controls.Add(this.txtTotId);
-            this.Controls.Add(this.txtDeptId);
             this.Controls.Add(this.txtClassName);
             this.Controls.Add(this.txtClassId);
             this.Controls.Add(this.label6);
@@ -388,11 +388,11 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtClassId;
         private System.Windows.Forms.TextBox txtClassName;
-        private System.Windows.Forms.TextBox txtDeptId;
         private System.Windows.Forms.TextBox txtTotId;
         private System.Windows.Forms.TextBox txtCouId;
         private System.Windows.Forms.TextBox txtSta;
         private System.Windows.Forms.ToolStripButton btnUpdate;
         private System.Windows.Forms.ToolStripButton btnAdd;
+        private System.Windows.Forms.TextBox txtDeptId;
     }
 }

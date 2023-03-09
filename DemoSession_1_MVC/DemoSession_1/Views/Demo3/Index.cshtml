@@ -1,0 +1,73 @@
+﻿<h3>Index page Demo3</h3>
+<fieldset>
+    <legend>Search By KeyWord</legend>
+    <form method="get" asp-controller="demo3" asp-action="searchByKeyword">
+        KeyWord <input type="text" name="keyword" />
+        <br />
+        <input type="submit" value="Search" />
+    </form>
+</fieldset>
+
+<br />
+<fieldset>
+    <legend>Search By Prices</legend>
+    <form method="get" asp-controller="demo3" asp-action="searchByPrices">
+        Min <input type="text" name="min" />
+        <br />
+        Max <input type="text" name="max" />
+        <br />
+        <input type="submit" value="Search" />
+    </form>
+</fieldset>
+
+<br />
+<fieldset>
+    <legend>Login Form</legend>
+    <form method="post" asp-controller="demo3" asp-action="login">
+        Username <input type="text" name="username" />
+        <br />
+        Password <input type="password" name="password" />
+        <br />
+        <input type="submit" value="Login" />
+    </form>
+</fieldset>
+
+<fieldset>
+    <legend>Update Form</legend>
+    <form method="post" asp-controller="demo3" asp-action="update">
+        Mail 1 <input type="text" name="mails" />
+        <br />
+        Mail 2 <input type="text" name="mails" />
+        <br />
+        Mail 3 <input type="text" name="mails" />
+        <br/>
+        Quantity 1 <input type="text" name="quantities" />
+        <br />
+        Quantity 2 <input type="text" name="quantities" />
+        <br />
+        Quantity 3 <input type="text" name="quantities" />
+        <br />
+        Quantity 4 <input type="text" name="quantities" />
+        <br />
+        <input type="submit" value="Login" />
+    </form>
+</fieldset>
+
+
+<fieldset >
+    <legend>Upload</legend>
+    <form method="post" asp-controller="demo3" asp-action="upload" enctype="multipart/form-data">
+        File <input type="file" name="file"/>
+        <br />
+        <input type="submit" value="Upload" />
+    </form>
+</fieldset>
+
+<fieldset>
+    <legend>Uploads</legend>
+    <form method="post" asp-controller="demo3" asp-action="uploads" enctype="multipart/form-data">
+        File <input type="file" name="files" multiple />
+        <br />
+        <input type="submit" value="Upload" />
+    </form>
+</fieldset>

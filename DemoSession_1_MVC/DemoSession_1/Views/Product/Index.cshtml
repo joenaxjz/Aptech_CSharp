@@ -1,0 +1,48 @@
+﻿<h3>Product List</h3>
+
+<fieldset>
+    <legend>Search By KeyWord</legend>
+    <form method="get" asp-controller="product" asp-action="searchByKeyword">
+        KeyWord <input type="text" name="keyword" value="@ViewBag.keyword"/>
+        <br />
+        <input type="submit" value="Search" />
+    </form>
+</fieldset>
+<br />
+<fieldset>
+    <legend>Search By Prices</legend>
+    <form method="get" asp-controller="product" asp-action="searchByPrices">
+        Min <input type="text" name="min" value="@ViewBag.min" />
+        <br />
+        Max <input type="text" name="max" value="@ViewBag.max" />
+        <br />
+        <input type="submit" value="Search" />
+    </form>
+</fieldset>
+<br />
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Photo</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Created</th>
+        <th>Total</th>
+    </tr>
+    @foreach(var prods in ViewBag.products)
+    {
+        <tr>
+            <td>@prods.Id</td>
+            <td>@prods.Name</td>
+            <td>
+                <a asp-controller="product" asp-action="detail" asp-route-id="@prods.Id"><img src="~/images/@prods.Photo" width="120" height="150"></a>
+            </td>
+            <td>@prods.Price</td>
+            <td>@prods.Quantity</td>
+            <td>@prods.Created.ToString("dd/MM/yyyy")</td>
+            <td>@(prods.Price * prods.Quantity)</td>
+        </tr>
+    }
+
+</table>

@@ -29,7 +29,7 @@ namespace ManageStudent
         {
             using (var ef = new ManageStudentEntities())
             {
-                bindingSource1.DataSource = ef.tblClasses.Where(cou => cou.status == "yes").Select(cls => new
+                bindingSource1.DataSource = ef.tblClasses.Where(cls => cls.status == "yes").Select(cls => new
                 {
                     cls.classId,
                     cls.className,

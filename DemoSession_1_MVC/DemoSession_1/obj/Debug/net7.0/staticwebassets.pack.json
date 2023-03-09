@@ -1,0 +1,85 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\acer\\source\\repos\\Aptech_CSharp\\DemoSession_1_MVC\\DemoSession_1\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\acer\\source\\repos\\Aptech_CSharp\\DemoSession_1_MVC\\DemoSession_1\\wwwroot\\images\\pic1.jpg",
+      "PackagePath": "staticwebassets\\images\\pic1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\acer\\source\\repos\\Aptech_CSharp\\DemoSession_1_MVC\\DemoSession_1\\wwwroot\\images\\pic2.jpg",
+      "PackagePath": "staticwebassets\\images\\pic2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\acer\\source\\repos\\Aptech_CSharp\\DemoSession_1_MVC\\DemoSession_1\\wwwroot\\images\\pic3.jpg",
+      "PackagePath": "staticwebassets\\images\\pic3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\acer\\source\\repos\\Aptech_CSharp\\DemoSession_1_MVC\\DemoSession_1\\wwwroot\\js\\mylib.js",
+      "PackagePath": "staticwebassets\\js\\mylib.js"
+    },
+    {
+      "Id": "C:\\Users\\acer\\source\\repos\\Aptech_CSharp\\DemoSession_1_MVC\\DemoSession_1\\wwwroot\\upload\\3db45ceb461341d9838b5117e7cb4544.jpg",
+      "PackagePath": "staticwebassets\\upload\\3db45ceb461341d9838b5117e7cb4544.jpg"
+    },
+    {
+      "Id": "C:\\Users\\acer\\source\\repos\\Aptech_CSharp\\DemoSession_1_MVC\\DemoSession_1\\wwwroot\\upload\\5ca1aef475b64dbb829599411897c3b8.jpg",
+      "PackagePath": "staticwebassets\\upload\\5ca1aef475b64dbb829599411897c3b8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\acer\\source\\repos\\Aptech_CSharp\\DemoSession_1_MVC\\DemoSession_1\\wwwroot\\upload\\5ff1aef0a15f44a8a13deee3cb593b2e.csv",
+      "PackagePath": "staticwebassets\\upload\\5ff1aef0a15f44a8a13deee3cb593b2e.csv"
+    },
+    {
+      "Id": "C:\\Users\\acer\\source\\repos\\Aptech_CSharp\\DemoSession_1_MVC\\DemoSession_1\\wwwroot\\upload\\6a0d54a984b74c0c8eb7bb974ad8e116.jpg",
+      "PackagePath": "staticwebassets\\upload\\6a0d54a984b74c0c8eb7bb974ad8e116.jpg"
+    },
+    {
+      "Id": "C:\\Users\\acer\\source\\repos\\Aptech_CSharp\\DemoSession_1_MVC\\DemoSession_1\\wwwroot\\upload\\7ddb6cdae99b43ffb45a90537e7c9c68.jpg",
+      "PackagePath": "staticwebassets\\upload\\7ddb6cdae99b43ffb45a90537e7c9c68.jpg"
+    },
+    {
+      "Id": "C:\\Users\\acer\\source\\repos\\Aptech_CSharp\\DemoSession_1_MVC\\DemoSession_1\\wwwroot\\upload\\Cướp biển vùng Caribbean (22).jpg",
+      "PackagePath": "staticwebassets\\upload\\Cướp biển vùng Caribbean (22).jpg"
+    },
+    {
+      "Id": "C:\\Users\\acer\\source\\repos\\Aptech_CSharp\\DemoSession_1_MVC\\DemoSession_1\\wwwroot\\upload\\af96eff64cd14669acdeb878c9de119b.csv",
+      "PackagePath": "staticwebassets\\upload\\af96eff64cd14669acdeb878c9de119b.csv"
+    },
+    {
+      "Id": "C:\\Users\\acer\\source\\repos\\Aptech_CSharp\\DemoSession_1_MVC\\DemoSession_1\\wwwroot\\upload\\be116aeb52ff4a259c0574373630e40b.JPG",
+      "PackagePath": "staticwebassets\\upload\\be116aeb52ff4a259c0574373630e40b.JPG"
+    },
+    {
+      "Id": "C:\\Users\\acer\\source\\repos\\Aptech_CSharp\\DemoSession_1_MVC\\DemoSession_1\\wwwroot\\upload\\d2a6743c875d42f79a61b3b9f8e1fa90.JPG",
+      "PackagePath": "staticwebassets\\upload\\d2a6743c875d42f79a61b3b9f8e1fa90.JPG"
+    },
+    {
+      "Id": "C:\\Users\\acer\\source\\repos\\Aptech_CSharp\\DemoSession_1_MVC\\DemoSession_1\\wwwroot\\upload\\d4fe18a6384647da8b1de7a903e8f7ff.jpg",
+      "PackagePath": "staticwebassets\\upload\\d4fe18a6384647da8b1de7a903e8f7ff.jpg"
+    },
+    {
+      "Id": "C:\\Users\\acer\\source\\repos\\Aptech_CSharp\\DemoSession_1_MVC\\DemoSession_1\\wwwroot\\upload\\f0720837e4314ad298de0d9d079349a5.png",
+      "PackagePath": "staticwebassets\\upload\\f0720837e4314ad298de0d9d079349a5.png"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.DemoSession_1.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.DemoSession_1.props",
+      "PackagePath": "build\\DemoSession_1.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.DemoSession_1.props",
+      "PackagePath": "buildMultiTargeting\\DemoSession_1.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.DemoSession_1.props",
+      "PackagePath": "buildTransitive\\DemoSession_1.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

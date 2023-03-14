@@ -27,3 +27,5 @@ C:\Users\acer\source\repos\Aptech_CSharp\DemoSession_1_MVC\DemoSession_1\obj\Deb
 C:\Users\acer\source\repos\Aptech_CSharp\DemoSession_1_MVC\DemoSession_1\obj\Debug\net7.0\DemoSession_1.RazorAssemblyInfo.cache
 C:\Users\acer\source\repos\Aptech_CSharp\DemoSession_1_MVC\DemoSession_1\obj\Debug\net7.0\DemoSession_1.RazorAssemblyInfo.cs
 C:\Users\acer\source\repos\Aptech_CSharp\DemoSession_1_MVC\DemoSession_1\bin\Debug\net7.0\DemoSession_1.staticwebassets.runtime.json
+C:\Users\acer\source\repos\Aptech_CSharp\DemoSession_1_MVC\DemoSession_1\bin\Debug\net7.0\BCrypt.Net-Core.dll
+C:\Users\acer\source\repos\Aptech_CSharp\DemoSession_1_MVC\DemoSession_1\obj\Debug\net7.0\DemoSession_1.csproj.CopyComplete

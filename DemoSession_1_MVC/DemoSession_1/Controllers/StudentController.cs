@@ -16,7 +16,6 @@ public class StudentController : Controller
     }
     [Route("")]
     [Route("index")]
-    [Route("~/")]
     public IActionResult Index()
     {
         return View();

@@ -1,0 +1,159 @@
+﻿@model DemoSession_1.Models.Account
+
+
+<h3>REGISTER Page</h3>
+
+<form method="post" asp-controller="account" asp-action="save">
+    <table>
+        <tr>    
+            <th>Username</th>
+            <td>
+                <input type="text" name="username" asp-for="username"/>
+            </td>
+        </tr>
+        <tr>
+            <th>Password</th>
+            <td>
+                <input type="password" name="password" asp-for="password" />
+            </td>
+        </tr>
+        <tr>
+            <th valign="top">Description</th>
+            <td>
+                <textarea cols="20" rows="5" asp-for="description"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <th valign="top">Detail</th>
+            <td>
+                <textarea cols="20" rows="5" asp-for="detail" id="editor"></textarea>
+            </td>
+        </tr>
+
+		<tr>
+			<th valign="top">Gender</th>
+			<td>
+				<input type="radio" value="male" asp-for="gender"/> Male
+				<input type="radio" value="female" asp-for="gender" /> Female
+			</td>
+		</tr>
+
+		<tr>
+			<th valign="top">Certificate</th>
+			
+			<td>
+				@foreach (var cert in ViewBag.certs)
+				{
+				<input type="radio" value="@cert.Id" asp-for="certId">@cert.Name
+				<br />
+				}
+			</td>
+			
+		</tr>
+
+		<tr>
+			<th valign="top">Certificate</th>
+
+			<td>
+				@foreach (var language in ViewBag.languages)
+				{
+					<input type="checkbox" value="@language.Id"  name="langIds"> @language.Name
+					<br />
+				}
+			</td>
+
+		</tr>
+
+
+		<tr>
+			<th valign="top">Roles</th>
+
+			<td>
+				<select asp-for="roleId">
+					@foreach (var role in ViewBag.roles)
+					{
+						<option value="@role.Id">@role.Name</option>
+					}
+				</select>
+				
+			</td>
+
+		</tr>
+
+		<tr>
+			<th valign="top">Status</th>
+			<td>
+				<input type="checkbox" asp-for="status" />
+			</td>
+		</tr>
+
+        <tr>
+            <th>&nbsp;</th>
+        <td>
+            <input type="submit" value="SAVE"/>
+			<input type="hidden" asp-for="Id"/>
+        </td>
+        </tr>
+    </table>
+</form>
+<script src="~/js/ckeditor/ckeditor.js"></script>
+<script>
+			/**
+	 * Copyright (c) 2003-2023, CKSource Holding sp. z o.o. All rights reserved.
+	 * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
+	 */
+
+	/* exported initSample */
+
+	if ( CKEDITOR.env.ie && CKEDITOR.env.version < 9 )
+		CKEDITOR.tools.enableHtml5Elements( document );
+
+	// The trick to keep the editor in the sample quite small
+	// unless user specified own height.
+	CKEDITOR.config.height = 150;
+	CKEDITOR.config.width = 'auto';
+
+	var initSample = ( function() {
+		var wysiwygareaAvailable = isWysiwygareaAvailable(),
+			isBBCodeBuiltIn = !!CKEDITOR.plugins.get( 'bbcode' );
+
+		return function() {
+			var editorElement = CKEDITOR.document.getById( 'editor' );
+
+			// :(((
+			if ( isBBCodeBuiltIn ) {
+				editorElement.setHtml(
+					'Hello world!\n\n' +
+					'I\'m an instance of [url=https://ckeditor.com]CKEditor[/url].'
+				);
+			}
+
+			// Depending on the wysiwygarea plugin availability initialize classic or inline editor.
+			if ( wysiwygareaAvailable ) {
+				CKEDITOR.replace( 'editor' );
+			} else {
+				editorElement.setAttribute( 'contenteditable', 'true' );
+				CKEDITOR.inline( 'editor' );
+
+				// TODO we can consider displaying some info box that
+				// without wysiwygarea the classic editor may not work.
+			}
+		};
+
+		function isWysiwygareaAvailable() {
+			// If in development mode, then the wysiwygarea must be available.
+			// Split REV into two strings so builder does not replace it :D.
+			if ( CKEDITOR.revision == ( '%RE' + 'V%' ) ) {
+				return true;
+			}
+
+			return !!CKEDITOR.plugins.get( 'wysiwygarea' );
+		}
+	} )();
+
+
+</script>
+
+<script>
+	initSample();
+</script>

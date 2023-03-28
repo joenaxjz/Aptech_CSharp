@@ -1,0 +1,81 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = DemoSession2_MVC
+build_property.RootNamespace = DemoSession2_MVC
+build_property.ProjectDir = C:\Users\acer\source\repos\Aptech_CSharp\DemoSession2_MVC\DemoSession2_MVC\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\acer\source\repos\Aptech_CSharp\DemoSession2_MVC\DemoSession2_MVC
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/acer/source/repos/Aptech_CSharp/DemoSession2_MVC/DemoSession2_MVC/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/acer/source/repos/Aptech_CSharp/DemoSession2_MVC/DemoSession2_MVC/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/acer/source/repos/Aptech_CSharp/DemoSession2_MVC/DemoSession2_MVC/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/acer/source/repos/Aptech_CSharp/DemoSession2_MVC/DemoSession2_MVC/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/acer/source/repos/Aptech_CSharp/DemoSession2_MVC/DemoSession2_MVC/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/acer/source/repos/Aptech_CSharp/DemoSession2_MVC/DemoSession2_MVC/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/acer/source/repos/Aptech_CSharp/DemoSession2_MVC/DemoSession2_MVC/Views/Account/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/acer/source/repos/Aptech_CSharp/DemoSession2_MVC/DemoSession2_MVC/Views/Account/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/acer/source/repos/Aptech_CSharp/DemoSession2_MVC/DemoSession2_MVC/Views/Account/Welcome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxXZWxjb21lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/acer/source/repos/Aptech_CSharp/DemoSession2_MVC/DemoSession2_MVC/Views/Cart/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/acer/source/repos/Aptech_CSharp/DemoSession2_MVC/DemoSession2_MVC/Views/Demo2/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVtbzJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/acer/source/repos/Aptech_CSharp/DemoSession2_MVC/DemoSession2_MVC/Views/Demo2/Index2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVtbzJcSW5kZXgyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/acer/source/repos/Aptech_CSharp/DemoSession2_MVC/DemoSession2_MVC/Views/Demo/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVtb1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/acer/source/repos/Aptech_CSharp/DemoSession2_MVC/DemoSession2_MVC/Views/Product/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/acer/source/repos/Aptech_CSharp/DemoSession2_MVC/DemoSession2_MVC/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = X1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/acer/source/repos/Aptech_CSharp/DemoSession2_MVC/DemoSession2_MVC/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-d99i0ujynb

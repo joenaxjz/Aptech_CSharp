@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "HTmTk0F2FJ77aM/C+JpwrVX21gCXInh2+4JbGSVHNzwrFYQjs+XzggF3lyCBSFybguqlZqV10wpTRz/JYWNdgA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\acer\\source\\repos\\Aptech_CSharp\\DemoSession2_MVC\\DemoSession2_MVC\\DemoSession2_MVC.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\acer\\.nuget\\packages\\bcrypt.net-core\\1.6.0\\bcrypt.net-core.1.6.0.nupkg.sha512",
+    "C:\\Users\\acer\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

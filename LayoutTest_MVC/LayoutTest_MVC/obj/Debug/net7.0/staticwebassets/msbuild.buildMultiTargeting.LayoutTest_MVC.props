@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\LayoutTest_MVC.props" />
+</Project>

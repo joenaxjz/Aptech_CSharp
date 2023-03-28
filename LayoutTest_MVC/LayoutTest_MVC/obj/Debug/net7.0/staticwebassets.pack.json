@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\acer\\source\\repos\\Aptech_CSharp\\LayoutTest_MVC\\LayoutTest_MVC\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.LayoutTest_MVC.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.LayoutTest_MVC.props",
+      "PackagePath": "build\\LayoutTest_MVC.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.LayoutTest_MVC.props",
+      "PackagePath": "buildMultiTargeting\\LayoutTest_MVC.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.LayoutTest_MVC.props",
+      "PackagePath": "buildTransitive\\LayoutTest_MVC.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

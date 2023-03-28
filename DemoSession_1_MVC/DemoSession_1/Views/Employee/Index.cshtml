@@ -1,0 +1,74 @@
+﻿@model DemoSession_1.Models.Employee
+
+<h1>Register</h1>
+<form method="post" asp-controller="employee" asp-action="save">
+    <table>
+        <tr>
+            <td>Full Name</td>
+            <td>
+                <input type="text" asp-for="fullname" />
+            </td>
+            <td>
+                <span asp-validation-for="fullname" style="color:red"></span>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Username</td>
+            <td>
+                <input type="text" asp-for="username" />
+            </td>
+            <td>
+                <span asp-validation-for="username" style="color:red"></span>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Password</td>
+            <td>
+                <input type="password" asp-for="password" />
+            </td>
+            <td>
+                <span asp-validation-for="password" style="color:red"></span>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Email</td>
+            <td>
+                <input type="text" asp-for="email" />
+            </td>
+            <td>
+                <span asp-validation-for="email" style="color:red"></span>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Website</td>
+            <td>
+                <input type="text" asp-for="Website" />
+            </td>
+            <td>
+                <span asp-validation-for="Website" style="color:red"></span>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Age</td>
+            <td>
+                <input type="text" asp-for="Age" />
+            </td>
+            <td>
+                <span asp-validation-for="Age" style="color:red"></span>
+            </td>
+
+        <tr>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                <input type="submit" value="Register" />
+            </td>
+        </tr>
+    </table>
+</form>

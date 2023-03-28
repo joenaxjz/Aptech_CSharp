@@ -8,7 +8,7 @@ namespace DemoSession_1.Controllers;
 
 public class AccountController : Controller
 {
-    [Route("~/")]
+    //[Route("~/")]
     [Route("")]
     [Route("index")]
     public IActionResult Index()
@@ -21,7 +21,8 @@ public class AccountController : Controller
             certId = "2",
             roleId = 4,
             Id = 123,
-            status = true
+            status = true,
+            Dob = DateTime.Now,
         };
         var cerModel = new CertModel();
         var LanguageModel = new LanguageModel();
@@ -65,7 +66,13 @@ public class AccountController : Controller
 		}
         Debug.WriteLine("Role is " + account.roleId);
         Debug.WriteLine("Account Id: " + account.Id);
-        Debug.WriteLine("Status: " + account.status);
+        Debug.WriteLine("Address information");
+        Debug.WriteLine("Street: " + account.address.Street);
+		Debug.WriteLine("Ward: " + account.address.Ward);
+		Debug.WriteLine("District: " + account.address.District);
+        Debug.WriteLine("DoB: " + account.Dob.ToString("MM/dd/yyyy"));
+
+		Debug.WriteLine("Status: " + account.status);
         return RedirectToAction("Index", "account");
     }
 }

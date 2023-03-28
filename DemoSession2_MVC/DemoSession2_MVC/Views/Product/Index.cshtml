@@ -1,0 +1,105 @@
+﻿<h1>Product List</h1>
+
+
+<fieldset>
+    <legend>Search By Date Ranged</legend>
+    <form method="get" asp-controller="product" asp-action="searchByCreated">
+        <label for="from">From</label>
+        <input type="text" id="date1" name="date1">
+        <label for="to">To</label>
+        <input type="text" id="date2" name="date2">
+        <br />
+        <input type="submit" value="Search" />
+    </form>
+</fieldset>
+
+<fieldset>
+    <legend>Search By KeyWord</legend>
+    <form method="get" asp-controller="product" asp-action="searchByKeyword">
+        KeyWord <input type="text" name="keyword" value="@ViewBag.keyword" />
+        <br />
+        <input type="submit" value="Search" />
+    </form>
+</fieldset>
+
+<br />
+<fieldset>
+    <legend>Search By Prices</legend>
+    <form method="get" asp-controller="product" asp-action="searchByPrices">
+        Min <input type="text" name="min" value="@ViewBag.min" />
+        <br />
+        Max <input type="text" name="max" value="@ViewBag.max" />
+        <br />
+        <input type="submit" value="Search" />
+    </form>
+</fieldset>
+<br />
+
+
+
+
+<table>
+    <tr>
+        <th>Id Product</th>
+        <th>Name </th>
+        <th>Image</th>
+        <th>Price</th>
+        <th>Created</th>
+        <th>Action</th>
+    </tr>
+    
+        @foreach (var product in ViewBag.products)
+        {
+        <tr>
+            <td>@product.Id</td>
+            <td>@product.Name</td>
+            <td>
+
+                <img src="~/img/@product.Image" width="200" height="250">
+            </td>
+            <td>@product.Price</td>
+            <td>@product.Created.ToString()</td>
+            <td>
+                <a asp-controller="cart" asp-action="buy" asp-route-id="@product.Id">Buy Now</a>
+            </td>
+        </tr>
+        }
+    
+</table>
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script>
+    $( function() {
+      var dateFormat = "mm/dd/yy",
+        date1 = $( "#date1" )
+          .datepicker({
+            defaultDate: "+1w",
+            changeMonth: true,
+            numberOfMonths: 3
+          })
+          .on( "change", function() {
+            date2.datepicker( "option", "minDate", getDate( this ) );
+          }),
+        date2 = $( "#date2" ).datepicker({
+          defaultDate: "+1w",
+          changeMonth: true,
+          numberOfMonths: 3
+        })
+        .on( "change", function() {
+          date1.datepicker( "option", "maxDate", getDate( this ) );
+        });
+
+      function getDate( element ) {
+        var date;
+        try {
+          date = $.datepicker.parseDate( dateFormat, element.value );
+        } catch( error ) {
+          date = null;
+        }
+
+        return date;
+      }
+    } );
+</script>

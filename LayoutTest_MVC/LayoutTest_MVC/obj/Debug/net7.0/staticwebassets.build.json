@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "LV58A6nkjfRWx54N5y7eBM7RRWWX+y+/11/z0giOuzs=",
+  "Source": "LayoutTest_MVC",
+  "BasePath": "_content/LayoutTest_MVC",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "LayoutTest_MVC\\wwwroot",
+      "Source": "LayoutTest_MVC",
+      "ContentRoot": "C:\\Users\\acer\\source\\repos\\Aptech_CSharp\\LayoutTest_MVC\\LayoutTest_MVC\\wwwroot\\",
+      "BasePath": "_content/LayoutTest_MVC",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\acer\\source\\repos\\Aptech_CSharp\\LayoutTest_MVC\\LayoutTest_MVC\\wwwroot\\css\\style.css",
+      "SourceId": "LayoutTest_MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\acer\\source\\repos\\Aptech_CSharp\\LayoutTest_MVC\\LayoutTest_MVC\\wwwroot\\",
+      "BasePath": "_content/LayoutTest_MVC",
+      "RelativePath": "css/style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\style.css"
+    }
+  ]
+}

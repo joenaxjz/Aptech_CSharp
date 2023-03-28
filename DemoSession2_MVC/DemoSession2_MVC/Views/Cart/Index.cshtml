@@ -1,0 +1,54 @@
+﻿<h1>Cart</h1>
+
+<form method="post" asp-action="update" asp-controller="cart" >
+<table border="1" align="center">
+    <tr>
+        <th>Action</th>
+        <th>Id Product</th>
+        <th>Name </th>
+        <th>Image</th>
+        <th>Price</th>
+        <th>Created</th>
+        <th>Quantity
+            <input type="submit" value="Update" />
+        </th>
+        <th>Total</th>
+    </tr>
+
+    @foreach (var c in ViewBag.cart)
+    {
+        
+        {
+            <tr>
+                <td align="center">
+                    <a asp-controller="cart" asp-action="remove" asp-route-id="@c.Product.Id">X</a>
+                </td>
+                <td>@c.Product.Id</td>
+                <td>@c.Product.Name</td>
+            <td>
+
+                    <img src="~/img/@c.Product.Image" width="200" height="250">
+            </td>
+                <td>@c.Product.Price</td>
+                <td>@c.Product.Created.ToString()</td>
+            <td>
+                    <input type="number" value="@c.Quantity" min="1" style="width: 70" name="quantities">
+            </td>
+            <td>
+                    @(c.Product.Price * c.Quantity)
+            </td>
+        </tr>
+        }
+    }
+    <tr>
+        <td align="right" colspan="7">
+            Total
+        </td>
+        <td>
+           @ViewBag.sum
+        </td>
+    </tr>
+
+</table>
+</form>
+<a asp-controller="product" asp-action="index">BACK</a>

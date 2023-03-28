@@ -14,8 +14,8 @@ public class Demo3Controller : Controller
     {
         webHostEnvironment = _webHostEnvironment;
     }
-
-    [Route("")]
+	//[Route("~/")]
+	[Route("")]
     [Route("index")]
     
     public IActionResult Index()
@@ -32,7 +32,16 @@ public class Demo3Controller : Controller
         return View("index");
     }
 
-    [Route("searchByPrices")]
+    [HttpPost]
+	[Route("searchByKeyword2")]
+	public IActionResult searchByKeyword2()
+	{
+        var keyword = HttpContext.Request.Form["keyword"].ToString();
+		Debug.WriteLine(keyword);
+		return View("index");
+	}
+
+	[Route("searchByPrices")]
     public IActionResult searchByPrices(double min, double max)
     {
         Debug.WriteLine("Min: " + min);

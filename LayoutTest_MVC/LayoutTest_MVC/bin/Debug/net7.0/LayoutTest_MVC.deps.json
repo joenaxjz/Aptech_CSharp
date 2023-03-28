@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "LayoutTest_MVC/1.0.0": {
+        "runtime": {
+          "LayoutTest_MVC.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "LayoutTest_MVC/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

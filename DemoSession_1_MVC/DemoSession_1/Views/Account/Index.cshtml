@@ -1,5 +1,13 @@
 ﻿@model DemoSession_1.Models.Account
 
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script>
+	$(function () {
+		$("#dob").datepicker();
+	});
+</script>
 
 <h3>REGISTER Page</h3>
 
@@ -79,6 +87,27 @@
 			</td>
 
 		</tr>
+
+		<tr>
+			<th valign="top">Addresses</th>
+
+			<td>
+				Street <input type="text"  asp-for="address.Street"/>
+				Ward <input type="text" asp-for="address.Ward" />
+				District <input type="text" asp-for="address.District" />
+			</td>
+
+		</tr>
+
+		<tr>
+			<th valign="top">Date of Birth</th>
+
+			<td>
+				<input type="text" id="dob" asp-for="Dob" asp-format="{0:MM/dd/yyyy}"/>
+			</td>
+
+		</tr>
+
 
 		<tr>
 			<th valign="top">Status</th>

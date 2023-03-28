@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "Uw1RSu0iIpEn0StA1jeytrnF9LnBm78+B4EPiEm/uO4=",
+  "Source": "DemoSession3_MVC",
+  "BasePath": "_content/DemoSession3_MVC",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "DemoSession3_MVC\\wwwroot",
+      "Source": "DemoSession3_MVC",
+      "ContentRoot": "C:\\Users\\acer\\source\\repos\\Aptech_CSharp\\DemoSession3_MVC\\DemoSession3_MVC\\wwwroot\\",
+      "BasePath": "_content/DemoSession3_MVC",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\acer\\source\\repos\\Aptech_CSharp\\DemoSession3_MVC\\DemoSession3_MVC\\wwwroot\\css\\style.css",
+      "SourceId": "DemoSession3_MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\acer\\source\\repos\\Aptech_CSharp\\DemoSession3_MVC\\DemoSession3_MVC\\wwwroot\\",
+      "BasePath": "_content/DemoSession3_MVC",
+      "RelativePath": "css/style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\style.css"
+    }
+  ]
+}
